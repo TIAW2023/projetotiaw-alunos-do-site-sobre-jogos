@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+}
+body {
+  padding: 10px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.header-filtros {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+#opcoes {
+  display: flex;
+  justify-content: space-between;
+}
+#options {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.button {
+  border-radius: 5px;
+  padding: 2px;
+}
+.jogos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.jogos img {
+  width: 500px;
+}
+.texto-jogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 500px);
+  text-align: center;
+  padding: 30px;
+}
+.pessoas-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 120px;
+  width: 100%;
+}
+.pessoa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pessoas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.pessoas-button {
+  width: 50px;
+}
