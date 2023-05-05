@@ -10,6 +10,9 @@ body {
   padding: 10px 40px;
   max-width: 1200px;
   margin: auto;
+  background: linear-gradient(45deg, #1b294a, #203158);
+box-shadow:  20px -20px 60px #152039,
+             -20px 20px 60px #273c6b;
 }
 header {
   margin: 0 auto;
@@ -26,6 +29,10 @@ header {
 #opcoes {
   display: flex;
   justify-content: space-between;
+  
+}
+label{
+  color: aliceblue;
 }
 #options {
   display: flex;
@@ -36,11 +43,15 @@ header {
 .button {
   border-radius: 5px;
   padding: 2px;
+  background-color:rgba(160, 160, 160, 0.2);
 }
 .jogos {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  border: 3px solid rgb(7, 7, 7);
+  border-radius: 5px;
+  cursor:pointer;
 }
 .jogos img {
   width: 500px;
@@ -71,5 +82,24 @@ header {
   gap: 50px;
 }
 .pessoas-button {
-  width: 50px;
+  width: 70px;
+}
+p{
+  color: aliceblue;
+}
+#options {
+  border: 2px solid darkgray;
+  background-color:rgba(160, 160, 160, 0.2);
+  border-radius: 4px;
+}
+.pessoas-button{
+  border-radius: 5px;
+  background-color: rgba(160, 160, 160, 0.2);
+}
+select option{
+  background-color: #1b294a;
+  color:antiquewhite;  
+}
+select{
+  color:antiquewhite;
 }
