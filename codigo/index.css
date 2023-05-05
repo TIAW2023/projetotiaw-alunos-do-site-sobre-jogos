@@ -1,0 +1,22 @@
+.gridhome{
+    display: grid;
+    border: 1px solid black;
+    height: 100vh;
+    grid-template-rows: 18% auto auto 25%;
+    grid-template-areas: 
+    'imagens imagens imagens'
+    'carrosel carrosel carrosel'
+    'rodape rodape rodape'
+}
+.cubo{
+    border: 2px solid red;
+}
+#imagens{
+    grid-area: imagens;
+}
+#imagens{
+    grid-area: carrosel;
+}
+#imagens{
+    grid-area: rodape;
+}
