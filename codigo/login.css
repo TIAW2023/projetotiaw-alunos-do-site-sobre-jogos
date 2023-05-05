@@ -11,6 +11,8 @@ html,body{
   width: 100%;
   place-items: center;
   background: -webkit-linear-gradient(left, #0a0b2e, #05061a);
+  background-image: url(https://wallpapercave.com/wp/wp7930285.jpg);
+  background-size: cover;
 }
 ::selection{
   background: #05061a;
@@ -19,10 +21,11 @@ html,body{
 .wrapper{
   overflow: hidden;
   max-width: 390px;
-  background: #fff;
+  background: rgba(10, 11, 46, 0.3);
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  border: 2px solid #05061a;
 }
 .wrapper .title-text{
   display: flex;
@@ -34,6 +37,7 @@ html,body{
   font-weight: 600;
   text-align: center;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  color:white;
 }
 .wrapper .slide-controls{
   position: relative;
@@ -43,7 +47,7 @@ html,body{
   overflow: hidden;
   margin: 30px 0 10px 0;
   justify-content: space-between;
-  border: 1px solid lightgrey;
+  border: 2px solid #05061a;
   border-radius: 5px;
 }
 .slide-controls .slide{
@@ -83,10 +87,10 @@ input[type="radio"]{
   user-select: none;
 }
 #signup:checked ~ label.login{
-  color: #000;
+  color: #fff;
 }
 #login:checked ~ label.signup{
-  color: #000;
+  color: #fff;
 }
 #login:checked ~ label.login{
   cursor: default;
@@ -137,10 +141,11 @@ form .field input:focus::placeholder{
 .form-inner form .signup-link{
   text-align: center;
   margin-top: 30px;
+  color: white;
 }
 .form-inner form .pass-link a,
 .form-inner form .signup-link a{
-  color: #05061a;
+  color: #fff;
   text-decoration: none;
 }
 .form-inner form .pass-link a:hover,
