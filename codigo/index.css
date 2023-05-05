@@ -1,26 +1,40 @@
 .gridhome{
     display: grid;
     border: 1px solid black;
-    height: 100vh;
-    grid-template-rows: 18% auto auto 25%;
+    height: 190vh;
+    grid-template-rows: 23% 25% 35% 13%;
     grid-template-areas:
     'welcome welcome welcome' 
     'imagens imagens imagens'
     'carrosel carrosel carrosel'
-    'rodape rodape rodape'
+    'rodape rodape rodape';
 }
 .cubo{
     border: 2px solid red;
 }
 #welcome{
     grid-area: welcome;
+    background-image: url(banner.jpg);
+    filter: blur(1.5px);
+    background-size: cover;
+
 }
 #imagens{
     grid-area: imagens;
+    
 }
-#imagens{
+#carrosel{
     grid-area: carrosel;
 }
-#imagens{
+#rodape{
     grid-area: rodape;
+}
+h1{
+    position: relative;
+    top: -70%;
+    left: 32%;
+    color: rgb(0, 217, 255);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 70px;
+    
 }
