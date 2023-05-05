@@ -3,13 +3,17 @@
     border: 1px solid black;
     height: 100vh;
     grid-template-rows: 18% auto auto 25%;
-    grid-template-areas: 
+    grid-template-areas:
+    'welcome welcome welcome' 
     'imagens imagens imagens'
     'carrosel carrosel carrosel'
     'rodape rodape rodape'
 }
 .cubo{
     border: 2px solid red;
+}
+#welcome{
+    grid-area: welcome;
 }
 #imagens{
     grid-area: imagens;
