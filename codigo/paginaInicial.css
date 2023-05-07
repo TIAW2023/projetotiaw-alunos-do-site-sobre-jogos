@@ -40,8 +40,9 @@ label {
 }
 .perfil-icon {
   display: block;
-  padding: 5px;
+  padding: 3px;
   padding-left: 100px;
+  font-size: 30px;
 
   cursor: pointer;
 }
