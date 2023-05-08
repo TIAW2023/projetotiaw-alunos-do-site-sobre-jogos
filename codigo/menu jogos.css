@@ -1,0 +1,69 @@
+.revflex{
+    display:flex;
+    flex-wrap:wrap;
+    width: 19vw;
+}
+
+.title{
+    display:flex;
+    position:relative;
+    left: 40%;
+    bottom: 140%;
+    text-decoration: none;
+    font-size: 35%;
+    width: 40%;
+    height: 30%;
+    color: white
+
+}
+.revflex img{
+    display: flex;
+    height: 90%;
+    width: 30%;
+    position:relative;
+    right: 15%;
+    bottom: -5%;
+    margin-left:20%;
+}
+.revflex strong{
+    display:flex;
+    position:relative;
+    top: -255%;
+    left: 40%;
+    font-size: 15px;
+    width: 60%;
+    color: white;
+}
+.revflex button{
+position:relative;
+width:40%;
+height:30px;
+border: 1px solid #1F51FF;
+color: white;
+cursor: pointer;
+background-color: #0a0b2e;
+border-radius: 5px;
+margin: 5%;
+left:25%;
+}
+.revflex{
+    display:flex;
+
+    flex-wrap:wrap;
+    width: 207px;
+}
+.revflex div{
+    background-color:#0a0b2e;
+    border: 1px solid #1F51FF;
+    height: 90px;
+    width: 287px;
+    text-align: center;
+    margin:2px;
+    font-size: 50px;
+    line-height: 100px;
+}
+.heart{
+    position: relative;
+    top: -155%;
+    left: 40%;
+}
