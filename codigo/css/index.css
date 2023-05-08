@@ -1,7 +1,7 @@
 .gridhome{
     display: grid;
     border: 1px solid black;
-    height: 190vh;
+    height: 100em;
     grid-template-rows: 23% 25% 35% 13%;
     grid-template-areas:
     'welcome welcome welcome' 
@@ -14,8 +14,8 @@
 }
 #welcome{
     grid-area: welcome;
-    background-image: url(banner.jpg);
-    filter: blur(1.5px);
+    background-image: url(/codigo/img/banner.jpg);
+    filter: blur(0.5px);
     background-size: cover;
 
 }
