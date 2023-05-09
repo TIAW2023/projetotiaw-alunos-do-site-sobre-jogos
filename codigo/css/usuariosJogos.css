@@ -17,13 +17,34 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 30px;
 }
-.header-filtros {
+.header-botoes,
+.perfil-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-filtro {
   display: flex;
   gap: 10px;
-  justify-content: space-between;
+}
+
+.icones-jogo {
+  display: flex;
+  gap: 15px;
+}
+
+.header-filtros {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
   padding: 0 10px;
-  margin-bottom: 30px;
 }
 #opcoes {
   display: flex;
@@ -39,14 +60,16 @@ label {
   cursor: pointer;
 }
 .perfil-icon {
-  display: block;
-  padding: 3px;
-  padding-left: 100px;
+  display: flex;
   font-size: 30px;
-
-  cursor: pointer;
+  align-items: center;
+  color: #0d0d25;
+  transition: color 0.5s;
 }
-
+.perfil-icon:hover {
+  cursor: pointer;
+  color: #1e1e55;
+}
 .button {
   border-radius: 5px;
   padding: 2px;
@@ -67,6 +90,7 @@ label {
 }
 .texto-jogo {
   display: flex;
+  font-size: 1rem;
   justify-content: center;
   align-items: center;
   width: calc(100% - 500px);
@@ -113,4 +137,59 @@ select option {
 }
 select {
   color: antiquewhite;
+}
+
+@media (max-width: 880px) {
+  .jogos {
+    flex-direction: column;
+  }
+
+  .jogos img {
+    width: 100%;
+  }
+
+  .texto-jogo {
+    line-height: 20px;
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header-filtros {
+    width: 100%;
+    order: 1;
+    flex-wrap: wrap;
+  }
+
+  .header-filtro {
+    flex-direction: column;
+  }
+
+  .header-botoes,
+  .perfil-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .perfil-icon {
+    padding: 0;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 460px) {
+  .pessoas {
+    font-size: 0.8rem;
+  }
+  .pessoas-grid {
+    grid-template-columns: auto auto;
+    row-gap: 80px;
+  }
 }

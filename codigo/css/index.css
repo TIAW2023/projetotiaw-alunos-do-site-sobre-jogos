@@ -1,40 +1,97 @@
-.gridhome{
-    display: grid;
-    border: 1px solid black;
-    height: 100em;
-    grid-template-rows: 23% 25% 35% 13%;
-    grid-template-areas:
-    'welcome welcome welcome' 
-    'imagens imagens imagens'
-    'carrosel carrosel carrosel'
-    'rodape rodape rodape';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.cubo{
-    border: 2px solid red;
+img {
+  padding: 20px;
+  width: 200px;
 }
-#welcome{
-    grid-area: welcome;
-    background-image: url(/codigo/img/banner.jpg);
-    filter: blur(0.5px);
-    background-size: cover;
 
+#welcome {
+  grid-area: welcome;
+  background-image: url(/codigo/img/banne.jpg);
+  filter: blur(0.5px);
+  background-size: cover;
 }
-#imagens{
-    grid-area: imagens;
-    
+#imagens {
+  grid-area: imagens;
 }
-#carrosel{
-    grid-area: carrosel;
+#carrosel {
+  grid-area: carrosel;
 }
-#rodape{
-    grid-area: rodape;
+#rodape {
+  grid-area: rodape;
 }
-h1{
-    position: relative;
-    top: -70%;
-    left: 32%;
-    color: rgb(0, 217, 255);
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 70px;
-    
+h1 {
+  position: relative;
+  top: -70%;
+  left: 32%;
+  color: rgb(0, 217, 255);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 70px;
+}
+.carousel {
+  width: 80%;
+  height: 350px;
+  border-radius: 5px;
+  background-image: url(./img/tenis1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.carousel-wrapper {
+  width: 80%;
+  height: 400px;
+  position: relative;
+}
+.carousel-item {
+  position: absolute;
+  border-radius: 8px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.arrow {
+  display: inline-block;
+  padding: 12px;
+}
+
+.arrow-prev {
+  left: -18px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 196, 0);
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  border-radius: 100%;
+}
+
+.arrow-next {
+  right: -18px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 196, 0);
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  border-radius: 100%;
+}
+.item-1 {
+  background: url("https://blog.elverys.ie/app/uploads/2018/06/NIKE-BANNERS-1920X696-2-1.jpg");
 }
