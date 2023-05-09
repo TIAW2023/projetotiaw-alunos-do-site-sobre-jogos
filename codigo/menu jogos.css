@@ -22,8 +22,9 @@
     width: 30%;
     position:relative;
     right: 15%;
-    bottom: -5%;
+    bottom: -3.5%;
     margin-left:20%;
+    cursor: pointer;
 }
 .revflex strong{
     display:flex;
@@ -53,7 +54,7 @@ left:25%;
     width: 207px;
 }
 .revflex div{
-    background-color:#0a0b2e;
+    background-color: rgba(10, 11, 46, 0.3);
     border: 1px solid #1F51FF;
     height: 90px;
     width: 287px;
@@ -66,4 +67,8 @@ left:25%;
     position: relative;
     top: -155%;
     left: 40%;
+}
+#pics{
+    background-color: none;
+    border: none;
 }
