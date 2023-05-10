@@ -7,10 +7,9 @@ img {
   padding: 20px;
   width: 200px;
 }
-
 #welcome {
   grid-area: welcome;
-  background-image: url(/codigo/img/banne.jpg);
+  background-image: url(/codigo/img/banner.jpg);
   filter: blur(0.5px);
   background-size: cover;
 }
