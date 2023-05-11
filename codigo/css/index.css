@@ -29,13 +29,41 @@
 #rodape{
     grid-area: rodape;
 }
-h1{
+body{
+   background-color: #0a0b2e;
+}
+.box{
     position: relative;
-    top: -70%;
-    left: 32%;
-    color: rgb(0, 217, 255);
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 70px;
+    top: 6%;
+    left: 8%;
+    width: 1080px;
+    height: 350px;
+    background-color: #05061a;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #45f3ff;
+}
+.box::before
+{
+    content: '';
+    position: absolute;
     
+    width: calc(100% + 30px;
+    height:calc(100% + 30px;
+    background: linear-gradient(0deg,transparent,
+    transparent, #45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: infinite  6s linear infinite;
+}
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
 }
 

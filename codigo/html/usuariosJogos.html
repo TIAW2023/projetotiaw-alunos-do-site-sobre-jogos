@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/codigo/css/usuariosJogos.css"/>
+  <link rel="stylesheet" href="../css/usuariosJogos.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@400;700&display=swap"
     rel="stylesheet" />
   <title>GamersOn</title>
@@ -15,36 +15,51 @@
 <body>
   <header>
     <div class="header-filtros">
-      <label for="opcoes">Filtrar por: </label>
-      <select id="options">
-        <option value="1">FPS</option>
-        <option value="2">MOBA</option>
-        <option value="3">RPG</option>
-        <option value="4">Esportes</option>
-        <option value="5">Estratégia RTS</option>
-        <option value="6">Luta</option>
-        <option value="7">Sobrevivência</option>
-        <option value="8">Terror</option>
-      </select>
-      <label for="opcoes">Filtrar por: </label>
-      <select id="options">
-        <option value="1">Recentes</option>
-        <option value="2">Mais Antigos</option>
-        <option value="3">Populares</option>
-      </select>
-      <label for="opcoes">Filtrar por: </label>
-      <select id="options">
-        <option value="1">Co-op</option>
-        <option value="2">Singleplayer</option>
-        <option value="3">Competitivo</option>
-        <option value="4">Campanha</option>
-      </select>
+      <div class="header-filtro">
+        <label for="opcoes">Filtrar por: </label>
+        <select id="options">
+          <option value="1">FPS</option>
+          <option value="2">MOBA</option>
+          <option value="3">RPG</option>
+          <option value="4">Esportes</option>
+          <option value="5">Estratégia RTS</option>
+          <option value="6">Luta</option>
+          <option value="7">Sobrevivência</option>
+          <option value="8">Terror</option>
+        </select>
+      </div>
+      <div class="header-filtro">
+        <label for="opcoes">Filtrar por: </label>
+        <select id="options">
+          <option value="1">Recentes</option>
+          <option value="2">Mais Antigos</option>
+          <option value="3">Populares</option>
+        </select>
+      </div>
+      <div class="header-filtro">
+        <label for="opcoes">Filtrar por: </label>
+        <select id="options">
+          <option value="1">Co-op</option>
+          <option value="2">Singleplayer</option>
+          <option value="3">Competitivo</option>
+          <option value="4">Campanha</option>
+        </select>
+
+      </div>
     </div>
-    <div class="header-button">
-      <input class="button" type="button" value="Pesquisar 🔎" />
-    </div>
-    <div class="perfil-icon">
-      <i class='bx bxs-user' style='color:#0d0d25'></i>
+    <div class="header-botoes">
+      <div class="header-button">
+        <input class="button" type="button" value="Pesquisar 🔎" />
+      </div>
+      <div class="icones-jogo">
+        <div class="perfil-icon">
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="favoritos-icon">
+          <i class='bx bxs-heart'></i>
+        </div>
+
+      </div>
     </div>
   </header>
   <div class="jogos">
@@ -90,27 +105,27 @@
     <h1>Pessoas</h1>
     <div class="pessoas-grid">
       <div class="pessoa">
-        <h2>Cirilo</h2>
+        <h2>Pessoa</h2>
         <p>Lorem, ipsum.</p>
       </div>
       <div class="pessoa">
-        <h2>Cirilo</h2>
+        <h2>Pessoa</h2>
         <p>Lorem, ipsum.</p>
       </div>
       <div class="pessoa">
-        <h2>Cirilo</h2>
+        <h2>Pessoa</h2>
         <p>Lorem, ipsum.</p>
       </div>
       <div class="pessoa">
-        <h2>Cirilo</h2>
+        <h2>Pessoa</h2>
         <p>Lorem, ipsum.</p>
       </div>
       <div class="pessoa">
-        <h2>Cirilo</h2>
+        <h2>Pessoa</h2>
         <p>Lorem, ipsum.</p>
       </div>
       <div class="pessoa">
-        <h2>Cirilo</h2>
+        <h2>Pessoa</h2>
         <p>Lorem, ipsum.</p>
       </div>
     </div>
