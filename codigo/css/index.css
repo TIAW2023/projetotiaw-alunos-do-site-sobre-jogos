@@ -47,6 +47,8 @@ body{
 .carro{
     position: relative;
     top: -24%;
+    display: grid ;
+    place-items: center;
    
 }
 .carro img{
