@@ -131,8 +131,8 @@ label {
   color: #1e1e55;
 }
 .pessoa img{
-  height: 40%;
-  
+  width: 150px;
+  border-radius: 50%;
 }
 p {
   color: aliceblue;
