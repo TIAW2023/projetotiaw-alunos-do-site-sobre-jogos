@@ -52,6 +52,7 @@ body{
 .carro img{
   position: relative;
   left: 19%;
+  gap: -90px;
 }
   
   section{
