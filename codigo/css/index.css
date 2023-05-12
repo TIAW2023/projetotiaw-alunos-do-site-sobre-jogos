@@ -296,3 +296,16 @@ footer {
         padding: 3rem 2rem;
     }
 }
+button1{
+  box-shadow: 0 0 5px cyan,
+  0 0 25px cyan;
+  position: relative;
+  left: 30%;
+  background-color: rgb(54, 159, 219);
+  font-size: 25px;
+
+button1 :hover{
+  box-shadow: 0 0 5px cyan,
+  0 0 25px cyan, 0 0 50px cyan,
+  0 0 100px cyan, 0 0 200px cyan;
+}
