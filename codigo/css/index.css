@@ -274,7 +274,14 @@ footer {
     opacity: 0.8;
 }
 
-
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
 
 @media screen and (max-width: 768px) {
     #footer_content {
