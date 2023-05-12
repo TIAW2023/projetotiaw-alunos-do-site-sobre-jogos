@@ -162,7 +162,7 @@ main {
 }
 
 footer {
-    width: 100%;
+    width: 100vw;
     color: var(--color-neutral-40);
 }
 
