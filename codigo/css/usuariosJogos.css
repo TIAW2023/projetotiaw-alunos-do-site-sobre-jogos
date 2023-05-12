@@ -124,6 +124,7 @@ label {
   gap: 50px;
 }
 .pessoas-button {
+  font-size: 15px;
   width: 70px;
 }
 .pessoas-button:hover {
