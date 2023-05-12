@@ -17,8 +17,113 @@
   </head>
 
   <body>
+    <style>
+      body{
+      background: #3C5377;
+      }
+  
+  /* THE MAINCONTAINER HOLDS EVERYTHING */
+  .maincontainer{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  /* THE CARD HOLDS THE FRONT AND BACK FACES */
+  .thecard{
+    position: relative;
+    top: 52%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+  }
+  
+  /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+  .thecard:hover{
+    transform: rotateY(180deg);
+  }
+  
+  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+   .thefront{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: linear-gradient(45deg, #1b294a, #203158);
+  box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
+  background-image: url(https://i.pinimg.com/originals/b6/cf/cd/b6cfcd513cd6819927a23f84f48cc038.png);
+  background-size: cover;
+    color: #000;
+  }
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  .theback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: linear-gradient(45deg, #1b294a, #203158);
+  box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
+  background-image: url(https://wallpaperaccess.com/full/82443.jpg);
+  background-size:cover;
+    color: #333;
+    text-align: center;
+    transform: rotateY(180deg);
+  }
+  
+  
+  /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+  .thefront h1, .theback h1{
+    font-family: 'zilla slab', sans-serif;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .thefront p, .theback p{
+    font-family: 'zilla slab', sans-serif;
+    padding: 30px;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+  }
+  /*This block (ends here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+      </style>
+    </head>
+  
+    <body>
+      <div class="maincontainer">
+  
+        <div class="thecard">
+  
+          <div class="thefront"><h1>Um mundo de possibilidades</h1><p>As melhores notícias. Tudo isso na GamersOn.</p></div>
+  
+          <div class="theback"><h1>Back of Card</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+          <button class="verMais">Ver mais!</button></div>
+  
+        </div>
+      </div>
     <div class="gridhome">
-      <div class="cubo" id="welcome"></div>
+      <div class="cubo" id="welcome">
+        <h1>GamersOn - Ceo: Sanzio</h1>
+      </div>
       <div class="cubo" id="imagens">
         <div class="box"></div>
       </div>
@@ -120,6 +225,77 @@
         </script>
       </div>
       <div class="cubo" id="rodape"></div>
+      <div id="footer_content">
+        <div id="footer_contacts">
+            <h1>Logo</h1>
+            <p>It's all about your dreams.</p>
+
+            <div id="footer_social_media">
+                <a href="#" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        
+        <ul class="footer-list">
+            <li>
+                <h3>Blog</h3>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Tech</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Adventures</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Music</a>
+            </li>
+        </ul>
+
+        <ul class="footer-list">
+            <li>
+                <h3>Products</h3>
+            </li>
+            <li>
+                <a href="#" class="footer-link">App</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Desktop</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Cloud</a>
+            </li>
+        </ul>
+
+        <div id="footer_subscribe">
+            <h3>Subscribe</h3>
+
+            <p>
+                Enter your e-mail to get notified about
+                our news solutions
+            </p>
+
+            <div id="input_group">
+                <input type="email" id="email">
+                <button>
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+            </div>
+        </div>
     </div>
- html> </body>
-</
+
+    <div id="footer_copyright">
+        &#169
+        2023 all rights reserved
+    </div>
+    </div>
+  </body>
+</html>
