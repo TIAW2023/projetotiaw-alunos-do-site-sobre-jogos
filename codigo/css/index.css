@@ -68,7 +68,7 @@ body {
 section {
   position: relative;
   height: 850px;
-  width: 1300px;
+  
   display: flex;
   align-items: center;
 }
