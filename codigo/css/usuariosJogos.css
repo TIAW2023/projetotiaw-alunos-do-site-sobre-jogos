@@ -81,7 +81,7 @@ label {
   background-color: rgba(160, 160, 160, 0.2);
   color: antiquewhite;
 }
-.button:hover{
+.button:hover {
   color: #1e1e55;
   cursor: pointer;
 }
@@ -124,13 +124,14 @@ label {
   gap: 50px;
 }
 .pessoas-button {
+  font-size: 15px;
   width: 70px;
 }
 .pessoas-button:hover {
   cursor: pointer;
   color: #1e1e55;
 }
-.pessoa img{
+.pessoa img {
   width: 150px;
   border-radius: 50%;
 }
@@ -186,7 +187,8 @@ select {
   }
 
   .header-botoes,
-  .perfil-icon, .favoritos-icon {
+  .perfil-icon,
+  .favoritos-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,7 +199,7 @@ select {
     padding: 0;
     font-size: 25px;
   }
-
+}
 @media (max-width: 460px) {
   .pessoas {
     font-size: 0.8rem;
@@ -205,5 +207,9 @@ select {
   .pessoas-grid {
     grid-template-columns: auto auto;
     row-gap: 80px;
+  }
+  .pessoa img {
+    width: 90px;
+    border-radius: 50%;
   }
 }
