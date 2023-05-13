@@ -130,6 +130,10 @@ label {
   cursor: pointer;
   color: #1e1e55;
 }
+.pessoa img{
+  width: 150px;
+  border-radius: 50%;
+}
 p {
   color: aliceblue;
 }
