@@ -18,7 +18,7 @@
 
 #welcome {
   grid-area: welcome;
-  background-image: url(/codigo/img/playbanner.png);
+  background-image: url(/codigo/img/gamerson.png);
   filter: blur(0.5px);
   background-size: cover;
   font-family: 'Lobster', cursive;
