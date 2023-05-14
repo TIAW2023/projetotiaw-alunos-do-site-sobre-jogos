@@ -15,7 +15,7 @@ body {
 }
 #img-superior {
     width: 100%;
-    height: 100%;
+    height: 10;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -75,4 +75,11 @@ h1{
     font-weight: 400;
     text-align: justify;
     margin: 20px;
+}
+.banner{
+    height: 30vh;
+    width: 100%;
+    background-image: url(https://preview.redd.it/new-csgo-banner-on-twitter-v0-d62aq07xnbpa1.png?auto=webp&s=07881672e655f03cd9fb8a233da4a7ee998d6c10);
+    background-size: cover;
+
 }
