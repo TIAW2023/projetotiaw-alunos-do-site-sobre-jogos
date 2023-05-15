@@ -12,9 +12,7 @@
     'rodape rodape rodape';
 }
 
-.cubo {
-  border: 2px solid red;
-}
+
 
 #welcome {
   grid-area: welcome;
