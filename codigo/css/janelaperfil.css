@@ -2,7 +2,7 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid #fbff00;
+    border: 2px solid #fbff0000;
     border-radius: 20px;
     box-sizing: border-box;
     background: linear-gradient(45deg, #1b294a, #203158);
@@ -55,6 +55,12 @@ body {
     margin-top: 10px;
     font-size: 16px;
     color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    background-color: #1b294a;
+    border: 1px solid #fbff00;
+    border-radius: 10px;
+    max-width: 1000px;
 }
 
 .profile-content {
