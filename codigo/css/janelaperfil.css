@@ -1,66 +1,57 @@
 .page-container {
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid #00000000;
+    border: 2px solid #fbff0000;
     border-radius: 20px;
     box-sizing: border-box;
+    background: linear-gradient(45deg, #1b294a, #203158);
+box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
 }
 
-  .small-image {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-
-    cursor: pointer;
-  }
-
-  body {
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #1b294a, #203158);
-    box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
-  }
-  
-  .profile {
+    background-color: #273c6b;
+}
+
+.profile {
     text-align: center;
     padding-bottom: 20px;
-  }
-  
-  .profile-header {
+}
+
+.profile-header {
     position: relative;
     padding: 50px 0;
-  }
-  
-  .background-image {
+}
+
+.background-image {
     width: 100%;
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 10px;
-  }
-  
-  .profile-picture {
+    border-radius: 5px;
+}
+
+.profile-picture {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 5px solid #1b294a;
+    border: 5px solid #152039;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  
-  .profile-name {
+}
+
+.profile-name {
     margin-top: 20px;
     font-size: 24px;
     color: #ffffff;
-  }
-  
-  .profile-description {
+}
+
+.profile-description {
     margin-top: 10px;
     font-size: 16px;
     color: #ffffff;
@@ -69,10 +60,10 @@
     background-color: #1b294a;
     border: 1px solid #fbff00;
     border-radius: 10px;
-    max-width: 1400px;
-  }
-  
-  .profile-content {
+    max-width: 1000px;
+}
+
+.profile-content {
     padding: 40px;
     background-color: #1b294a;
     text-align: left;
@@ -80,39 +71,38 @@
     border: 2px solid #fbff00;
     border-radius: 20px;
 }
-  
-  .profile-content h2 {
+
+.profile-content h2 {
     margin-top: 0;
     color: #ffffff;
-  }
-  
-  .profile-content li {
+}
+
+.profile-content li {
     margin-bottom: 5px;
-  }
-  
-  .bio-section {
+}
+
+.bio-section {
     background-color: #1b294a;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
     border: 2px solid #fbff00;
     margin-bottom: 20px;
-    font-size: 15px;
 }
 
-  .game-images {
+.game-images {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     margin-top: 20px;
-  }
-  
-  .game-item {
+}
+
+.game-item {
     margin-right: 20px;
     margin-bottom: 20px;
-  }
-  
-  .game-box {
+}
+
+.game-box {
     text-align: center;
     padding: 10px;
     background-color: #203158;
@@ -120,16 +110,56 @@
     flex-wrap: wrap;
 }
 
-  .game-box img {
-    width: 140px;
-    height: 140px;
+.game-box img {
+    width: 130px;
+    height: 130px;
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 10px;
-  }
+}
 
-  .game-box p {
+.game-box p {
     margin: 0;
     font-size: 14px;
     color: #ffffff;
-  }
+}
+
+.image-footer {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.image-footer img {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #fbff00; 
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.image-footer a {
+    display: inline-block;
+}
+
+.image-footer img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
