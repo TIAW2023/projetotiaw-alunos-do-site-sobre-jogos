@@ -16,8 +16,7 @@ body {
 header {
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
   margin-bottom: 30px;
   gap: 30px;
 }
@@ -28,36 +27,9 @@ header {
   align-items: center;
   gap: 20px;
 }
-
-.header-filtro {
-  display: flex;
-  gap: 10px;
-}
-
 .icones-jogo {
   display: flex;
   gap: 15px;
-}
-
-.header-filtros {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-}
-#opcoes {
-  display: flex;
-  justify-content: space-between;
-}
-label {
-  color: aliceblue;
-}
-#options {
-  display: flex;
-  justify-content: space-between;
-  border-radius: 10px;
-  cursor: pointer;
 }
 .perfil-icon,
 .favoritos-icon {
@@ -74,16 +46,6 @@ label {
 .favoritos-icon:hover {
   cursor: pointer;
   color: #1e1e55;
-}
-.button {
-  border-radius: 5px;
-  padding: 2px;
-  background-color: rgba(160, 160, 160, 0.2);
-  color: antiquewhite;
-}
-.button:hover {
-  color: #1e1e55;
-  cursor: pointer;
 }
 .jogos {
   display: flex;
@@ -128,7 +90,6 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
 }
 .pessoas {
   display: flex;
@@ -150,14 +111,10 @@ label {
 .pessoa img {
   width: 150px;
   border-radius: 50%;
+  cursor: pointer;
 }
 p {
   color: aliceblue;
-}
-#options {
-  border: 2px solid darkgray;
-  background-color: rgba(160, 160, 160, 0.2);
-  border-radius: 4px;
 }
 .pessoas-button {
   border-radius: 5px;
@@ -188,21 +145,9 @@ select {
   }
 
   header {
-    flex-direction: column;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 20px;    
   }
-
-  .header-filtros {
-    width: 100%;
-    order: 1;
-    flex-wrap: wrap;
-  }
-
-  .header-filtro {
-    flex-direction: column;
-  }
-
-  .header-botoes,
   .perfil-icon,
   .favoritos-icon {
     display: flex;

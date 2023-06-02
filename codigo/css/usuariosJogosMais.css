@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    list-style-type: none;
+}
+body{
+    padding: 10px 40px;
+    max-width: 1200px;
+    margin: auto;
+    background: linear-gradient(45deg, #1b294a, #203158);
+    box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
+}
+header {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+.header-filtros {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+.header-filtro {
+    display: flex;
+    gap: 10px;
+}
+#opcoes {
+    display: flex;
+    justify-content: space-between;
+}
+label {
+    color: aliceblue;
+}
+#options {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    cursor: pointer;
+}  
+#options {
+    border: 2px solid darkgray;
+    background-color: rgba(160, 160, 160, 0.2);
+}
+.button {
+    border-radius: 5px;
+    padding: 2px;
+    background-color: rgba(160, 160, 160, 0.2);
+    color: antiquewhite;
+}
+.button:hover {
+    color: #1e1e55;
+    cursor: pointer;
+}
+.jogos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    border: 3px solid rgb(7, 7, 7);
+    border-radius: 5px;
+    cursor: pointer;
+}
+  .jogos img {
+    width: 500px;
+}
+.texto-jogo {
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 500px);
+    text-align: center;
+    padding: 30px;
+}
+p {
+    color: aliceblue;
+}
+@media (max-width: 880px) {
+    .jogos {
+      flex-direction: column;
+    }
+  
+    .jogos img {
+      width: 100%;
+    }
+  
+    .texto-jogo {
+      line-height: 20px;
+      font-size: 0.8rem;
+      width: 100%;
+      padding: 20px;
+    }
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .header-filtros {
+        width: 100%;
+        order: 0;
+        flex-wrap: wrap;
+    }    
+    .header-filtro {
+        flex-direction: column;
+    }
+    .header-botoes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+} 
