@@ -11,13 +11,14 @@
     rel="stylesheet" />
   <title>GamersOn</title>
   <link rel="shortcut icon" href="/codigo/img/icon.ico" type="image/x-icon">
+  <script src="usuariosJogos.js"></script>
 </head>
 
 <body>
   <header>
     <div class="header-filtros">
       <div class="header-filtro">
-        <label for="opcoes">Filtrar por: </label>
+        <label for="opcoes">Gênero: </label>
         <select id="options">
           <option value="1">FPS</option>
           <option value="2">MOBA</option>
@@ -30,21 +31,21 @@
         </select>
       </div>
       <div class="header-filtro">
-        <label for="opcoes">Filtrar por: </label>
-        <select id="options">
-          <option value="1">Recentes</option>
-          <option value="2">Mais Antigos</option>
-          <option value="3">Populares</option>
-        </select>
-      </div>
-      <div class="header-filtro">
-        <label for="opcoes">Filtrar por: </label>
+        <label for="opcoes">Modalidade: </label>
         <select id="options">
           <option value="1">Co-op</option>
           <option value="2">Singleplayer</option>
           <option value="3">Competitivo</option>
           <option value="4">Campanha</option>
         </select>
+        <div class="header-filtro">
+          <label for="opcoes">Filtrar por: </label>
+          <select id="options">
+            <option value="1">Recentes</option>
+            <option value="2">Mais Antigos</option>
+            <option value="3">Populares</option>
+          </select>
+        </div>
 
       </div>
     </div>
@@ -102,6 +103,7 @@
       </p>
     </div>
   </div>
+  <input class="mais-jogos" type="button" value="Mais" />
   <div class="pessoas">
     <h1>Pessoas</h1>
     <div class="pessoas-grid">
