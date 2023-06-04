@@ -34,7 +34,7 @@ function entrarSite(){
         window.location.href = "";
     }
     else{
-        alert("A senha inserida está incorreta.")
+        alert("Os dados inseridos estão incorretos.")
     }
     
 }
