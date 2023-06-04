@@ -30,17 +30,17 @@
          <div class="form-inner">
             <form action="#" class="login">
                <div class="field">
-                  <input type="email" placeholder="Endereço de Email" required>
+                  <input type="email" placeholder="Endereço de Email" id="emailLogin" oninvalid="this.setCustomValidity('Por favor, insira um email válido')" required>
                </div>
                <div class="field">
-                  <input type="password" placeholder="Senha" required minlength="2">
+                  <input type="password" placeholder="Senha" required id="senhaLogin" minlength="2">
                </div>
                <div class="pass-link">
-                  <a href="#">Esqueceu sua senha?</a>
+                  <a href="#"></a>
                </div>
                <div class="field btn">
                   <div class="btn-layer"></div>
-                  <input type="submit" value="Login">
+                  <input type="submit" value="Login" onclick="entrarSite()">
                </div>
                <div class="signup-link">
                   Não é um membro? <a href="">Registrar</a>
@@ -48,17 +48,17 @@
             </form>
             <form action="#" class="signup">
                <div class="field">
-                  <input type="email" placeholder="Endereço de Email" required>
+                  <input type="email" placeholder="Endereço de Email" id="email" oninvalid="this.setCustomValidity('Por favor, insira um email válido')"  required>
                </div>
                <div class="field">
-                  <input type="password" placeholder="Senha" required>
+                  <input type="password" placeholder="Senha" id="senha" minlength="2" required>
                </div>
                <div class="field">
-                  <input type="password" placeholder="Confirmar Senha" required>
+                  <input type="password" placeholder="Confirmar Senha" id="confirmarSenha" minlength="2" required>
                </div>
                <div class="field btn">
                   <div class="btn-layer"></div>
-                  <input type="submit" value="Registrar">
+                  <input type="submit" value="Registrar" onclick="salvarDados()">
                </div>
             </form>
          </div>
@@ -83,6 +83,7 @@
          return false;
       });
    </script>
+   <script src="/codigo/js/login.js"></script>
 </body>
 
 </html>
