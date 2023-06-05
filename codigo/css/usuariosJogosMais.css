@@ -28,7 +28,7 @@ header {
     align-items: center;
     padding: 0 10px;
 }
-.header-filtro {
+#filtroJogos, #filtroData {
     display: flex;
     gap: 10px;
 }
@@ -49,17 +49,17 @@ label {
     border: 2px solid darkgray;
     background-color: rgba(160, 160, 160, 0.2);
 }
-.button {
+#buscar {
     border-radius: 5px;
     padding: 2px;
     background-color: rgba(160, 160, 160, 0.2);
     color: antiquewhite;
 }
-.button:hover {
+#buscar:hover {
     color: #1e1e55;
     cursor: pointer;
 }
-.jogos {
+#jogos {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 30px;
@@ -67,7 +67,7 @@ label {
     border-radius: 5px;
     cursor: pointer;
 }
-  .jogos img {
+#jogos img {
     width: 500px;
 }
 .texto-jogo {
@@ -83,11 +83,11 @@ p {
     color: aliceblue;
 }
 @media (max-width: 880px) {
-    .jogos {
+    #jogos {
       flex-direction: column;
     }
   
-    .jogos img {
+    #jogos img {
       width: 100%;
     }
   
@@ -107,7 +107,7 @@ p {
         order: 0;
         flex-wrap: wrap;
     }    
-    .header-filtro {
+    #filtroJogos, #filtroData {
         flex-direction: column;
     }
     .header-botoes {
