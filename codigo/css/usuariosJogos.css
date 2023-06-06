@@ -55,7 +55,7 @@ header {
   border-radius: 5px;
   cursor: pointer;
 }
-#jogos img {
+.jogo img {
   width: 500px;
 }
 .mais-jogos {
@@ -129,11 +129,11 @@ select {
 }
 
 @media (max-width: 880px) {
-  #jogos {
+  .jogos {
     flex-direction: column;
   }
 
-  #jogos img {
+  .jogos img {
     width: 100%;
   }
 
