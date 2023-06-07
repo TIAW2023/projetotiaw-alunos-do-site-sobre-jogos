@@ -51,12 +51,18 @@ header {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  cursor: pointer;
+  gap: 15px;
+}
+.jogo{
   border: 3px solid rgb(7, 7, 7);
   border-radius: 5px;
-  cursor: pointer;
+  width: 100%;
+  display: flex;
 }
 .jogo img {
   width: 500px;
+  height: 100%;
 }
 .mais-jogos {
   border-radius: 5px;
@@ -79,6 +85,8 @@ header {
   width: calc(100% - 500px);
   text-align: center;
   padding: 30px;
+  flex-direction: column;
+  gap: 15px;
 }
 .pessoas-grid {
   display: grid;
