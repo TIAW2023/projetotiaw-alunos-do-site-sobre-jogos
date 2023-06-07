@@ -31,7 +31,7 @@ function renderizarJogos(jogos) {
         </div>
         <div class="texto-jogo">
         <h1>${jogoAtual.title}</h1>
-        <p>${jogoAtual.genre}</p>
+        <p>Gênero: ${jogoAtual.genre}</p>
         <p>Descrição: ${jogoAtual.short_description}</p>
         <p>Data de Lançamento: ${new Date(
           jogoAtual.release_date.replace("-", "/")

@@ -63,12 +63,18 @@ label {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    cursor: pointer;
+    gap: 15px; 
+}
+.jogo{
     border: 3px solid rgb(7, 7, 7);
     border-radius: 5px;
-    cursor: pointer;
+    width: 100%;
+    display: flex;
 }
-#jogos img {
+.jogo img {
     width: 500px;
+    height: 100%;
 }
 .texto-jogo {
     display: flex;
@@ -78,19 +84,20 @@ label {
     width: calc(100% - 500px);
     text-align: center;
     padding: 30px;
+    flex-direction: column;
+    gap: 15px;
 }
 p {
     color: aliceblue;
 }
 @media (max-width: 880px) {
-    #jogos {
+    .jogo {
       flex-direction: column;
     }
   
-    #jogos img {
+    .jogo img {
       width: 100%;
     }
-  
     .texto-jogo {
       line-height: 20px;
       font-size: 0.8rem;
@@ -116,4 +123,12 @@ p {
       align-items: center;
       gap: 50px;
     }
-} 
+    p{
+        font-size: 1.0rem;
+    }
+}
+@media (max-width: 425px){
+    p{
+        font-size: 1.0rem;
+    }
+}

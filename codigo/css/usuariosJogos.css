@@ -39,6 +39,11 @@ header {
   color: #0d0d25;
   transition: color 0.5s;
 }
+.favoritos-icon{
+  font-size: 25px;
+  
+}
+
 .perfil-icon:hover {
   cursor: pointer;
   color: #1e1e55;
@@ -137,14 +142,13 @@ select {
 }
 
 @media (max-width: 880px) {
-  .jogos {
+  .jogo {
     flex-direction: column;
   }
 
-  .jogos img {
+  .jogo img {
     width: 100%;
   }
-
   .texto-jogo {
     line-height: 20px;
     font-size: 0.8rem;
@@ -168,8 +172,11 @@ select {
     padding: 0;
     font-size: 25px;
   }
+  p{
+    font-size: 1.2rem;
+  }
 }
-@media (max-width: 460px) {
+@media (max-width: 425px) {
   .pessoas {
     font-size: 0.8rem;
   }
@@ -180,5 +187,8 @@ select {
   .pessoa img {
     width: 90px;
     border-radius: 50%;
+  }
+  p{
+    font-size: 1.0rem;
   }
 }

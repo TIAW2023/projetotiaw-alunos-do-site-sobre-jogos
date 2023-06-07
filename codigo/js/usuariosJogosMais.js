@@ -27,13 +27,19 @@ function renderizarJogos(jogos) {
     const jogoAtual = jogos[i];
 
     divJogos.innerHTML += `
-      <h1>${jogoAtual.title}</h1>
+    <div class="jogo">
+      <div>
       <img src="${jogoAtual.thumbnail}"/>
-      <p>${jogoAtual.genre}</p>
+      </div>
+      <div class="texto-jogo">
+      <h1>${jogoAtual.title}</h1>
+      <p>Gênero: ${jogoAtual.genre}</p>
       <p>Descrição: ${jogoAtual.short_description}</p>
       <p>Data de Lançamento: ${new Date(
         jogoAtual.release_date.replace("-", "/")
       ).toLocaleDateString("pt-BR")}</p>
+      </div>
+    </div>  
     `;
   }
 }
