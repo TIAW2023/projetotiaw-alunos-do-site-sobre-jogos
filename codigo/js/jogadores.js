@@ -7,5 +7,4 @@ function exibirUsuario() {
         card += `<p>${usuario.userName - usuario.bio}}</p>
 
     }
-    docu
-}
+}    
