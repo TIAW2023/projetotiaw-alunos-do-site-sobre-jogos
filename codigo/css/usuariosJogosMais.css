@@ -31,6 +31,7 @@ header {
 #filtroJogos, #filtroData {
     display: flex;
     gap: 10px;
+    size: 5px;
 }
 #opcoes {
     display: flex;
