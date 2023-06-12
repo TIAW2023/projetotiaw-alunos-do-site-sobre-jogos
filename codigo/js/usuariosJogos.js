@@ -50,3 +50,8 @@ fetch(url, options).then((resposta) => {
       renderizarJogos(jogosAleatorios);
     });
 });
+
+//localstorage
+
+localStorage.setItem("jogo", jogosAleatorios);
+console.log(localStorage.getItem("jogo"));
