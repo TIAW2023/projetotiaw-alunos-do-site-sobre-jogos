@@ -10,17 +10,12 @@ function renderizarJogos(jogos) {
     const divJogos = document.getElementById("jogos");
     let quantidadeJogos = 10;
   
-    // limpa div de jogos
     divJogos.innerHTML = "";
   
-    /* se a quantidade de jogos filtrados for menor que o limite definido para ser renderizado,
-       exiba a quantidade de itens do array de jogos filtrados.
-    */
     if (jogos.length < 10) {
       quantidadeJogos = jogos.length;
     }
   
-    // passa por cada jogo, renderizando na tela
     for (let i = 0; i < quantidadeJogos; i++) {
       const jogoAtual = jogos[i];
   

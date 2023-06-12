@@ -91,6 +91,9 @@ label {
 p {
     color: aliceblue;
 }
+h1{
+    color: black;
+}
 @media (max-width: 880px) {
     .jogo {
       flex-direction: column;
