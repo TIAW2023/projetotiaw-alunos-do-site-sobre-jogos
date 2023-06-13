@@ -45,19 +45,19 @@ box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
 }
 
 .profile-name {
-    margin-top: 20px;
-    font-size: 24px;
+    margin-top: 40px;
+    font-size: 40px;
     color: #ffffff;
 }
 
 .profile-description {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 25px;
     color: #ffffff;
     text-align: center;
     padding: 10px;
     background-color: #1b294a;
-    border: 1px solid #fbff00;
+    border: 1px solid #000000;
     border-radius: 10px;
     max-width: 1000px;
 }
@@ -67,13 +67,14 @@ box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
     background-color: #1b294a;
     text-align: left;
     color: #ffffff;
-    border: 2px solid #fbff00;
+    border: 2px solid #000000;
     border-radius: 20px;
 }
 
 .profile-content h2 {
-    margin-top: 0;
+    margin-top: 10;
     color: #ffffff;
+    font-size: 30px;
 }
 
 .profile-content li {
@@ -85,15 +86,16 @@ box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
-    border: 2px solid #fbff00;
+    border: 2px solid #000000;
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .game-images {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .game-item {
@@ -138,7 +140,7 @@ box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
 .close-button {
     position: absolute;
     top: 10px;
-    left: 10px;
+    right: 20px;
     width: 30px;
     height: 30px;
     background-color: #fbff00; 
