@@ -53,5 +53,7 @@ fetch(url, options).then((resposta) => {
 
 //localstorage
 
-localStorage.setItem("jogo", jogosAleatorios);
-console.log(localStorage.getItem("jogo"));
+const jogosAleatorios = [];
+renderizarJogos(jogosAleatorios);
+
+localStorage.setItem('jogosAleatorios', JSON.stringify(jogosAleatorios));
