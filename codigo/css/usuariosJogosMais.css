@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    list-style-type: none;
+}
+body{
+    padding: 10px 40px;
+    max-width: 1200px;
+    margin: auto;
+    background: linear-gradient(45deg, #1b294a, #203158);
+    box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
+}
+header {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+.header-filtros {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+#filtroJogos, #filtroData {
+    display: flex;
+    gap: 10px;
+    size: 5px;
+}
+#opcoes {
+    display: flex;
+    justify-content: space-between;
+}
+label {
+    color: aliceblue;
+}
+#options {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    cursor: pointer;
+}  
+#options {
+    border: 2px solid darkgray;
+    background-color: rgba(160, 160, 160, 0.2);
+}
+#buscar {
+    border-radius: 5px;
+    padding: 2px;
+    background-color: rgba(160, 160, 160, 0.2);
+    color: antiquewhite;
+}
+#buscar:hover {
+    color: #1e1e55;
+    cursor: pointer;
+}
+#jogos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    cursor: pointer;
+    gap: 15px; 
+}
+.jogo{
+    border: 3px solid rgb(7, 7, 7);
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+}
+.jogo img {
+    width: 500px;
+    height: 100%;
+}
+.texto-jogo {
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 500px);
+    text-align: center;
+    padding: 30px;
+    flex-direction: column;
+    gap: 15px;
+}
+p {
+    color: aliceblue;
+}
+h1{
+    color: black;
+}
+@media (max-width: 880px) {
+    .jogo {
+      flex-direction: column;
+    }
+  
+    .jogo img {
+      width: 100%;
+    }
+    .texto-jogo {
+      line-height: 20px;
+      font-size: 0.8rem;
+      width: 100%;
+      padding: 20px;
+    }
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .header-filtros {
+        width: 100%;
+        order: 0;
+        flex-wrap: wrap;
+    }    
+    #filtroJogos, #filtroData {
+        flex-direction: column;
+    }
+    .header-botoes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+    p{
+        font-size: 1.0rem;
+    }
+}
+@media (max-width: 425px){
+    p{
+        font-size: 1.0rem;
+    }
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 .gridhome {
   display: grid;
@@ -6,10 +6,10 @@
   height: 100em;
   grid-template-rows: 23% 25% 35% 13%;
   grid-template-areas:
-    'welcome welcome welcome'
-    'imagens imagens imagens'
-    'carrosel carrosel carrosel'
-    'rodape rodape rodape';
+    "welcome welcome welcome"
+    "imagens imagens imagens"
+    "carrosel carrosel carrosel"
+    "rodape rodape rodape";
 }
 
 
@@ -19,9 +19,8 @@
   background-image: url(/codigo/img/gamerson.png);
   filter: blur(0.5px);
   background-size: cover;
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   font-size: 50px;
-
 }
 
 #welcome h1 {
@@ -32,7 +31,6 @@
 
 #imagens {
   grid-area: imagens;
-
 }
 
 #carrosel {
@@ -48,13 +46,11 @@ body {
   box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
 }
 
-
 .carro {
   position: relative;
   top: -24%;
   display: grid;
   place-items: center;
-
 }
 
 .carro img {
@@ -79,7 +75,6 @@ section {
   position: relative;
   border-radius: 20px;
   margin: 20px 0;
-
 }
 
 .card .card-content {
@@ -95,7 +90,6 @@ section .card .image {
   width: 100%;
   cursor: pointer;
   padding: 10px;
-
 }
 
 section .card .image img {
@@ -104,7 +98,6 @@ section .card .image img {
   border-radius: 20px;
   transition: all 0.4s;
   opacity: 60%;
-
 }
 
 section .card .image img:hover {
@@ -112,14 +105,11 @@ section .card .image img:hover {
   opacity: 100%;
 }
 
-
-
 .swiper-button-next,
 .swiper-button-prev {
   opacity: 0.7;
   color: #ffffff;
   transition: all 0.3s ease;
-
 }
 
 .swiper-button-next:hover,
@@ -139,19 +129,17 @@ section .card .image img:hover {
   background: linear-gradient(45deg, #1b294a, #203158);
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
 
 :root {
   --color-neutral-0: #0e0c0c;
   --color-neutral-10: #171717;
   --color-neutral-30: #a8a29e;
   --color-neutral-40: #f5f5f5;
-
 }
 
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -299,8 +287,7 @@ footer {
 }
 
 button {
-  box-shadow: 0 0 5px cyan,
-    0 0 25px cyan;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan;
   position: relative;
 
   background-color: rgb(54, 159, 219);
@@ -311,4 +298,40 @@ button:shover {
   box-shadow: 0 0 5px cyan,
     0 0 25px cyan, 0 0 50px cyan,
     0 0 100px cyan, 0 0 200px cyan;
+}
+.logo{
+  opacity: 0;
+}
+
+
+
+@media screen and (max-width: 667px){
+  .card{
+    justify-content: center;
+  
+  }
+  .carro{
+    justify-content: center;
+    left: -3%;
+  }
+  .thecard{
+    margin-left: 0%;
+    width: 2%;
+    top: 200%;
+  }
+  .maincontainer{
+    width: 100%;
+    transform: rotate(35deg);
+  }
+  .logo{
+    position: relative;
+    opacity: 1;
+    width: 30%;
+    left: -35px;
+  }
+ #welcome{
+  background-image: none;
+ }
+ 
+
 }

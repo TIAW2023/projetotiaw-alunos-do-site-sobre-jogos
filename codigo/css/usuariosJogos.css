@@ -16,8 +16,7 @@ body {
 header {
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
   margin-bottom: 30px;
   gap: 30px;
 }
@@ -28,36 +27,12 @@ header {
   align-items: center;
   gap: 20px;
 }
-
-.header-filtro {
-  display: flex;
-  gap: 10px;
-}
-
 .icones-jogo {
   display: flex;
   gap: 15px;
 }
-
-.header-filtros {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-}
-#opcoes {
-  display: flex;
-  justify-content: space-between;
-}
-label {
-  color: aliceblue;
-}
-#options {
-  display: flex;
-  justify-content: space-between;
-  border-radius: 10px;
-  cursor: pointer;
+.perfil-icon{
+  color: #0d0d25;
 }
 .perfil-icon,
 .favoritos-icon {
@@ -75,26 +50,35 @@ label {
   cursor: pointer;
   color: #1e1e55;
 }
-.button {
-  border-radius: 5px;
-  padding: 2px;
-  background-color: rgba(160, 160, 160, 0.2);
-  color: antiquewhite;
-}
-.button:hover {
-  color: #1e1e55;
-  cursor: pointer;
-}
-.jogos {
+#jogos {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  cursor: pointer;
+  gap: 15px;
+}
+.jogo{
   border: 3px solid rgb(7, 7, 7);
   border-radius: 5px;
-  cursor: pointer;
+  width: 100%;
+  display: flex;
 }
-.jogos img {
+.jogo img {
   width: 500px;
+  height: 100%;
+}
+.mais-jogos {
+  border-radius: 5px;
+  background-color: rgba(160, 160, 160, 0.2);
+  font-size: 15px;
+  width: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.mais-jogos:hover {
+  cursor: pointer;
+  color: #1e1e55;
 }
 .texto-jogo {
   display: flex;
@@ -104,6 +88,8 @@ label {
   width: calc(100% - 500px);
   text-align: center;
   padding: 30px;
+  flex-direction: column;
+  gap: 15px;
 }
 .pessoas-grid {
   display: grid;
@@ -115,13 +101,15 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
 }
 .pessoas {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
+}
+.pessoas h1 {
+  margin-top: 20px;
 }
 .pessoas-button {
   font-size: 15px;
@@ -134,14 +122,13 @@ label {
 .pessoa img {
   width: 150px;
   border-radius: 50%;
+  cursor: pointer;
 }
 p {
   color: aliceblue;
 }
-#options {
-  border: 2px solid darkgray;
-  background-color: rgba(160, 160, 160, 0.2);
-  border-radius: 4px;
+h1 {
+  color: black;
 }
 .pessoas-button {
   border-radius: 5px;
@@ -156,14 +143,13 @@ select {
 }
 
 @media (max-width: 880px) {
-  .jogos {
+  .jogo {
     flex-direction: column;
   }
 
-  .jogos img {
+  .jogo img {
     width: 100%;
   }
-
   .texto-jogo {
     line-height: 20px;
     font-size: 0.8rem;
@@ -172,21 +158,9 @@ select {
   }
 
   header {
-    flex-direction: column;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 20px;    
   }
-
-  .header-filtros {
-    width: 100%;
-    order: 1;
-    flex-wrap: wrap;
-  }
-
-  .header-filtro {
-    flex-direction: column;
-  }
-
-  .header-botoes,
   .perfil-icon,
   .favoritos-icon {
     display: flex;
@@ -199,8 +173,11 @@ select {
     padding: 0;
     font-size: 25px;
   }
+  p{
+    font-size: 1.2rem;
+  }
 }
-@media (max-width: 460px) {
+@media (max-width: 425px) {
   .pessoas {
     font-size: 0.8rem;
   }
@@ -211,5 +188,8 @@ select {
   .pessoa img {
     width: 90px;
     border-radius: 50%;
+  }
+  p{
+    font-size: 1.0rem;
   }
 }
