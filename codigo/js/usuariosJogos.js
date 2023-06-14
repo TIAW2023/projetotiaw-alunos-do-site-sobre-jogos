@@ -53,7 +53,7 @@ fetch(url, options).then((resposta) => {
 
 //localstorage
 
-const jogosAleatorios = [];
-renderizarJogos(jogosAleatorios);
-
-localStorage.setItem('jogosAleatorios', JSON.stringify(jogosAleatorios));
+let salvarJogos = function(){
+  let jogos = document.getElementById("jogos").value;
+  localStorage.setItem("jogos", jogos);
+}
