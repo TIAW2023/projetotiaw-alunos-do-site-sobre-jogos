@@ -3,7 +3,7 @@ function salvarDados(){
     var senha = document.getElementById('senha').value;
     var confSenha = document.getElementById('confirmarSenha').value;
     var teste = JSON.parse(localStorage.getItem('dadosUsuario'));
-    if(email === teste.email){
+    if(email === teste.email && teste.email != null){
         alert("Já existe uma conta com este email.")
         return;
     }
