@@ -1,18 +1,22 @@
+
+body {
+    background-color: #1b294a;
+  }
+
 .page-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid #fbff0000;
     border-radius: 20px;
     box-sizing: border-box;
+    background: linear-gradient(45deg, #1b294a, #203158);
+    box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #1b294a, #203158);
-box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
 }
 
 .profile {
@@ -112,8 +116,8 @@ box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
 }
 
 .game-box img {
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 10px;
@@ -121,7 +125,7 @@ box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
 
 .game-box p {
     margin: 0;
-    font-size: 14px;
+    font-size: 34px;
     color: #ffffff;
 }
 
