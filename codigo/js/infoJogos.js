@@ -14,7 +14,6 @@ fetch(url, options).then((resposta) => {
     const [jogo] = jogos.filter((jogo) => jogo.id == id);
     const body = document.querySelector("body");
 
-    console.log(jogo);
 
     body.innerHTML += `
       <div class="banner">
