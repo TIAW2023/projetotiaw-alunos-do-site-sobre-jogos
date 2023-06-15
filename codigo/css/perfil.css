@@ -11,6 +11,16 @@ body {
   background: linear-gradient(45deg, #1b294a, #203158);
   box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
 }
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(45deg, #1b294a, #203158);
+  box-shadow: 20px -20px 60px #152039, -20px 20px 60px #273c6b;
+}
   
   .small-image {
     top: 20px;
@@ -18,6 +28,22 @@ body {
     height: 50px;
     cursor: pointer;
   }
+
+  .save-button {
+    background-color: #c9ff36;
+    color: #1b294a;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .save-button:hover {
+    background-color: #b4e329;
+  }
+  
 
 .body {
   margin: 0;

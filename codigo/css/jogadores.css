@@ -1,3 +1,4 @@
+ 
 body {
   margin: 10%;
   padding: 1%;
@@ -24,8 +25,8 @@ body {
   border-radius: 10px;
 }
 .rectangle h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 50px;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -41,7 +42,23 @@ body {
 }
 
 .content p {
-  font-size: 18px;
+  font-size: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #45a049;
 }
 
 .filter-box {
@@ -87,3 +104,4 @@ body {
   margin-left: auto; 
   cursor: pointer;
 }
+
