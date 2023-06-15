@@ -51,9 +51,3 @@ fetch(url, options).then((resposta) => {
     });
 });
 
-//localstorage
-
-let salvarJogos = function(){
-  let jogos = document.getElementById("jogos").value;
-  localStorage.setItem("jogos", jogos);
-}
