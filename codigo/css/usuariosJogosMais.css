@@ -94,6 +94,12 @@ p {
 h1{
     color: black;
 }
+.jogoContainer {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+  
 @media (max-width: 880px) {
     .jogo {
       flex-direction: column;
