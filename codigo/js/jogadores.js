@@ -13,7 +13,7 @@ function exibirUsuario() {
           </div>
         </div>`
     }
-    document.querySelector(`#java`).innerHTML = card;
+    document.querySelector(`java`).innerHTML = card;
 }   
 
 function mostrarUsuario(){
@@ -21,15 +21,17 @@ function mostrarUsuario(){
 
     const id = document.querySelectorAll("java").forEach;
     
-    content.addEventListener( function(event) {
+    button.addEventListener( function(event) {
     const el = event.target || event.srcElement;
     const id = el.id;
     console.log(id);
   });
 
-    var usuario = bancoUsuarios[`java`];
+    var button = bancoUsuarios[`java`];
 
-    document.querySelector('#java').innerHTML = card;
+    document.querySelector('java').innerHTML = card;
+    document.querySelector('.button').innerHTML = card;
+    
     mostrarUsuario();
 
 }
