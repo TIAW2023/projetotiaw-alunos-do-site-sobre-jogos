@@ -21,7 +21,7 @@ function mostrarUsuario(){
 
     const id = document.querySelectorAll("java").forEach;
     
-    img.addEventListener( function(event) {
+    content.addEventListener( function(event) {
     const el = event.target || event.srcElement;
     const id = el.id;
     console.log(id);
