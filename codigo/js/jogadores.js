@@ -30,6 +30,7 @@ function mostrarUsuario(){
     var usuario = bancoUsuarios[`java`];
 
     document.querySelector('#java').innerHTML = card;
+    mostrarUsuario();
 
 }
 
@@ -42,5 +43,5 @@ console.log('submetido');
 
 onload = ()=> {
     exibirUsuario();
-    mostrarUsuario();
+    
 }
