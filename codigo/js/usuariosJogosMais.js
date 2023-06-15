@@ -22,15 +22,17 @@ function renderizarJogos(jogos) {
     const jogoAtual = jogos[i];
 
     divJogos.innerHTML += `
-    <div class="jogo">
-      <div>
-      <img src="${jogoAtual.thumbnail}"/>
+    <a class="jogoContainer" href="infoJogos.html?id=${jogoAtual.id}">
+      <div class="jogo">
+        <div>
+        <img src="${jogoAtual.thumbnail}"/>
+        </div>
+        <div class="texto-jogo">
+        <h1>${jogoAtual.title}</h1>
+        <p>Gênero: ${jogoAtual.genre}</p>
+        </div>
       </div>
-      <div class="texto-jogo">
-      <h1>${jogoAtual.title}</h1>
-      <p>Gênero: ${jogoAtual.genre}</p>
-      </div>
-    </div>  
+    </a>  
     `;
   }
 }

@@ -141,6 +141,11 @@ select option {
 select {
   color: antiquewhite;
 }
+.jogoContainer {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
 
 @media (max-width: 880px) {
   .jogo {

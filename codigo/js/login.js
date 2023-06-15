@@ -1,15 +1,20 @@
-function salvarDados(){
+function salvarDados() {
     var email = document.getElementById('email').value;
     var senha = document.getElementById('senha').value;
     var confSenha = document.getElementById('confirmarSenha').value;
-    var teste = JSON.parse(localStorage.getItem('dadosUsuario'));
-    if(email === teste.email){
-        alert("Já existe uma conta com este email.")
+    var dadosUsuario = localStorage.getItem('dadosUsuario');
+    
+    if (dadosUsuario !== null) {
+      var teste = JSON.parse(dadosUsuario);
+      
+      if (email === teste.email) {
+        alert("Já existe uma conta com este email.");
         return;
+      }
     }
-    else if(senha !== confSenha){
-        window.alert("As senhas precisam de ser idênticas.")
-        return;
+    else if (senha !== confSenha) {
+      window.alert("As senhas precisam ser idênticas.");
+      return;
     }
 
     var dados = {
