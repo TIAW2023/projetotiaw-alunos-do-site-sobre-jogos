@@ -36,9 +36,15 @@ h1{
     margin: 20px;
 }
 .banner{
+    display: flex;
     height: 45vh;
     width: 100%;
     background-size: cover;
+    justify-content: center;
+}
+.banner img{
+    width: 900px;
+    border-radius: 20px;
 }
 html, body { 
     background: #333; 
