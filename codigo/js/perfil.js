@@ -21,7 +21,7 @@ function handleImageClick() {
   function saveInformation() {
     const profileName = document.querySelector('.profile-name');
     const profileDescription = document.querySelector('.profile-description');
-    if(profileDescription.textContent.length > 109){
+    if(profileDescription.textContent.length > 75){
       profileDescription.textContent = "Valor ultrapassado, erro";
     }
     const bioSection = document.querySelector('.bio-section');
