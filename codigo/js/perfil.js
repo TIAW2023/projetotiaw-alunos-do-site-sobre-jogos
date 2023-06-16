@@ -1,4 +1,4 @@
-// mexe no clique na imagem
+// oq sera editavel
 function handleImageClick() {
     const profileName = document.querySelector('.profile-name');
     const profileDescription = document.querySelector('.profile-description');
