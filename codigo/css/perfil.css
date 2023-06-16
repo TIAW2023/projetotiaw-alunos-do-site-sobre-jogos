@@ -2,6 +2,27 @@ body {
   background-color: #1b294a;
 }
 
+.header {
+  background-color: #111c31;
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-item {
+  margin-right: 20px;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #203158;
+  border-radius: 5px;
+}
+
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
