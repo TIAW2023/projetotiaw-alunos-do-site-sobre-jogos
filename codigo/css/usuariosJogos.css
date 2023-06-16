@@ -31,6 +31,9 @@ header {
   display: flex;
   gap: 15px;
 }
+.perfil-icon{
+  color: #0d0d25;
+}
 .perfil-icon,
 .favoritos-icon {
   display: flex;
@@ -39,11 +42,6 @@ header {
   color: #0d0d25;
   transition: color 0.5s;
 }
-.favoritos-icon{
-  font-size: 25px;
-  
-}
-
 .perfil-icon:hover {
   cursor: pointer;
   color: #1e1e55;
@@ -129,6 +127,9 @@ header {
 p {
   color: aliceblue;
 }
+h1 {
+  color: black;
+}
 .pessoas-button {
   border-radius: 5px;
   background-color: rgba(160, 160, 160, 0.2);
@@ -139,6 +140,11 @@ select option {
 }
 select {
   color: antiquewhite;
+}
+.jogoContainer {
+  text-decoration: none;
+  color: black;
+  width: 100%;
 }
 
 @media (max-width: 880px) {
