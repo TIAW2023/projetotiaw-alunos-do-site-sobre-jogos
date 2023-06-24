@@ -1,4 +1,4 @@
-// configurações para uso do fetch
+
 const url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
 const options = {
   method: "GET",
@@ -7,6 +7,22 @@ const options = {
     "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
   },
 };
+
+fetch(url, options).then((resposta) => {
+  resposta.json().then((jogos) => {
+    const jogosAleatorios = [];
+
+    for (let i = 0; i < 10; i++) {
+      const indiceAleatorio = Math.floor(Math.random() * jogos.length);
+      const jogoAleatorio = jogos[indiceAleatorio];
+
+      jogosAleatorios.push(jogoAleatorio);
+    }
+
+    renderizarJogos(jogosAleatorios);
+  });
+});
+
 
 function renderizarJogos(jogos) {
   const divJogos = document.getElementById("jogos");
