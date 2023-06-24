@@ -38,7 +38,7 @@ function renderizarJogos(jogos) {
     const jogoAtual = jogos[i];
 
     divJogos.innerHTML += `
-    <a class="jogoContainer" href="infoJogos.html?id=${jogoAtual.id}">
+    <a class="jogoContainer" href="infoJogos.html?id=${jogoAtual.id}" target="_blank">
       <div class="jogo">
         <div>
         <img src="${jogoAtual.thumbnail}"/>

@@ -9,7 +9,7 @@
     list-style-type: none;
 }
 body {
-    padding: 10px 40px;
+    padding: 80px 40px;
     max-width: 1200px;
     margin: auto;
     background: linear-gradient(45deg, #1b294a, #203158);
@@ -23,7 +23,7 @@ body {
   
 h1{
     color: black;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 00;
     text-align: center;
     margin: 20px 0;
