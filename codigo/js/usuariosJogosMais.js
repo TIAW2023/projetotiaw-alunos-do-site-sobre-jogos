@@ -74,8 +74,8 @@ fetch(url, options).then((resposta) => {
 
         const jogosFiltrados = jogos.filter((jogo) => {
 
-          const respeitaFiltroJogo = jogo.genre == genero;
-          let respeitaFiltroData;
+          const respeitaFiltroJogo = genero === "Todos" ? true : jogo.genre === genero
+          let respeitaFiltroData = data === "Todos" ? true : false
   
 
           if (data === "recentes") {
