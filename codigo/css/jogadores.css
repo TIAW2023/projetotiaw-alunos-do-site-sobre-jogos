@@ -46,7 +46,17 @@ body {
 }
 
 .button {
+<<<<<<< HEAD
   background-color: #4CAF50;
+=======
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #0052b1;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+>>>>>>> f4e2db4db6423c40ccf62af092de929eba948615
   border: none;
   color: white;
   padding: 10px 20px;
@@ -54,8 +64,12 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+<<<<<<< HEAD
   margin: 10px auto;
   cursor: pointer;
+=======
+  left: 14%;
+>>>>>>> f4e2db4db6423c40ccf62af092de929eba948615
 }
 
 .button:hover {
