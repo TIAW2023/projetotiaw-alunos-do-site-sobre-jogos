@@ -27,7 +27,7 @@ function mostrarUsuario(){
     console.log(id);
   });
 
-    var button = bancoUsuarios[`java`];
+    var button = bancoUsuarios['$java'];
 
     document.querySelector('java').innerHTML = card;
     document.querySelector('.button').innerHTML = card;

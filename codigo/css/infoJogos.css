@@ -9,7 +9,7 @@
     list-style-type: none;
 }
 body {
-    padding: 10px 40px;
+    padding: 80px 40px;
     max-width: 1200px;
     margin: auto;
     background: linear-gradient(45deg, #1b294a, #203158);
@@ -22,19 +22,21 @@ body {
 }
   
 h1{
-    color: #fff;
+    color: black;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 00;
     text-align: center;
     margin: 20px 0;
 }
+
 #desc {
     color: #fff;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 400;
     text-align: center;
     margin: 20px;
 }
+
 .banner{
     display: flex;
     height: 45vh;
@@ -42,10 +44,8 @@ h1{
     background-size: cover;
     justify-content: center;
 }
+
 .banner img{
     width: 800px;
     border-radius: 20px;
-}
-html, body { 
-    background: #333; 
 }

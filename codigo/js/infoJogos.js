@@ -23,7 +23,7 @@ fetch(url, options).then((resposta) => {
       <p id="desc">${jogo.short_description}</p>
       <p id="desc">Editora: ${jogo.publisher}</p>
       <p id="desc">Desenvolvedor: ${jogo.developer}</p>
-      <p id="desc">Data de publicação: ${jogo.release_date}</p>
+      <p id="desc">Data de Lançamento: ${jogo.release_date}</p>
       <p id="desc">Plataforma: ${jogo.platform}</p>
     `;
   });
