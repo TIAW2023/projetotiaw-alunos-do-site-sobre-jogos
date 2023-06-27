@@ -20,7 +20,7 @@ function renderizarJogos(jogos) {
       const jogoAtual = jogos[i];
   
       divJogos.innerHTML += `
-      <a class="jogoContainer" href="infoJogos.html?id=${jogoAtual.id}">
+      <a class="jogoContainer" href="infoJogos.html?id=${jogoAtual.id}" target="_blank">
         <div class="jogo">
           <div>
           <img src="${jogoAtual.thumbnail}"/>
@@ -28,10 +28,6 @@ function renderizarJogos(jogos) {
           <div class="texto-jogo">
           <h1>${jogoAtual.title}</h1>
           <p>Gênero: ${jogoAtual.genre}</p>
-          <p>Descrição: ${jogoAtual.short_description}</p>
-          <p>Data de Lançamento: ${new Date(
-            jogoAtual.release_date.replace("-", "/")
-          ).toLocaleDateString("pt-BR")}</p>
           </div>
         </div>
       </a>  
@@ -52,4 +48,3 @@ fetch(url, options).then((resposta) => {
       renderizarJogos(jogosAleatorios);
     });
 });
-
