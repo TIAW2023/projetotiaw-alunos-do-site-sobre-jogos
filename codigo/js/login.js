@@ -32,7 +32,7 @@ function salvarDados() {
   dadosUsuario.push(dados);
   localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
   alert('Registro efetuado com sucesso.');
-  window.location.href = "https://www.youtube.com/";
+  window.open("../html/janelaperfil.html");
 }
 
 var contador = 0;
@@ -56,3 +56,4 @@ function entrarSite() {
   
 
 }
+
