@@ -31,24 +31,22 @@ header {
   display: flex;
   gap: 15px;
 }
-.perfil-icon{
-  color: #0d0d25;
+a:link, a:visited {
+  text-decoration: none;
+  color: black;
 }
-.perfil-icon,
-.favoritos-icon {
+a:hover {
+  color: #1e1e55;
+}
+.perfil-icon { 
   display: flex;
   font-size: 30px;
   align-items: center;
-  color: #0d0d25;
+  color: l;
   transition: color 0.5s;
 }
 .perfil-icon:hover {
   cursor: pointer;
-  color: #1e1e55;
-}
-.favoritos-icon:hover {
-  cursor: pointer;
-  color: #1e1e55;
 }
 #jogos {
   display: flex;
@@ -102,7 +100,7 @@ header {
   flex-direction: column;
   align-items: center;
 }
-.pessoas {
+#pessoas {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,6 +110,12 @@ header {
   margin-top: 20px;
 }
 .pessoas-button {
+  display: block;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  background-color: rgba(160, 160, 160, 0.2);
   font-size: 15px;
   width: 70px;
 }
@@ -129,10 +133,6 @@ p {
 }
 h1 {
   color: black;
-}
-.pessoas-button {
-  border-radius: 5px;
-  background-color: rgba(160, 160, 160, 0.2);
 }
 select option {
   background-color: #1b294a;
