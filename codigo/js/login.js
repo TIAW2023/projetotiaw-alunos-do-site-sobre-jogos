@@ -1,46 +1,58 @@
 function salvarDados() {
-    var email = document.getElementById('email').value;
-    var senha = document.getElementById('senha').value;
-    var confSenha = document.getElementById('confirmarSenha').value;
-    var dadosUsuario = localStorage.getItem('dadosUsuario');
-    
-    if (dadosUsuario !== null) {
-      var teste = JSON.parse(dadosUsuario);
-      
+  var email = document.getElementById('email').value;
+  var senha = document.getElementById('senha').value;
+  var confSenha = document.getElementById('confirmarSenha').value;
+  var dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'));
+  if(!dadosUsuario){
+    dadosUsuario = [];
+  }
+  if (dadosUsuario.length > 0) {
+    for (let i = 0; i < dadosUsuario.length; i++) {
+
+      var teste = dadosUsuario[i];
+
       if (email === teste.email) {
         alert("Já existe uma conta com este email.");
         return;
       }
     }
-    else if (senha !== confSenha) {
-      window.alert("As senhas precisam ser idênticas.");
-      return;
-    }
+  }
+  if (senha !== confSenha) {
+    window.alert("As senhas precisam ser idênticas.");
+    return;
+  }
 
-    var dados = {
-        email: email,
-        senha: senha,
-        userName: "",
-        pfp: "",
-        bio: "",
-    }
-    localStorage.setItem('dadosUsuario', JSON.stringify(dados));
-    alert('Registro efetuado com sucesso.');
-    window.location.href = "";
-
+  var dados = {
+    email: email,
+    senha: senha,
+    userName: "",
+    pfp: "",
+    bio: "",
+  }
+  dadosUsuario.push(dados);
+  localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
+  alert('Registro efetuado com sucesso.');
+  window.location.href = "https://www.youtube.com/";
 }
-function entrarSite(){
-    var emailEntrar = document.getElementById('emailLogin').value;
-    var senhaEntrar = document.getElementById('senhaLogin').value;
 
-    var dadosLogin = JSON.parse(localStorage.getItem('dadosUsuario'));
-    if(emailEntrar === dadosLogin.email && senhaEntrar === dadosLogin.senha){
-        alert("Login efetuado com sucesso");
-        window.location.href = "";
-    }
-    else{
-        alert("Os dados inseridos estão incorretos.")
+var contador = 0;
+function entrarSite() {
+  var emailEntrar = document.getElementById('emailLogin').value;
+  var senhaEntrar = document.getElementById('senhaLogin').value;
+  var dadosLogin = JSON.parse(localStorage.getItem('dadosUsuario'));
+  for(let i = 0; i < dadosLogin.length; i++){
+    if (emailEntrar === dadosLogin[i].email && senhaEntrar === dadosLogin[i].senha) {
+      let id = i;
+      localStorage.setItem('Logado', id);
+      alert("Login efetuado com sucesso");
+      window.open("../html/janelaperfil.html");
+      contador++;
     }
     
-}
+  }
+  if(contador == 0){
+    alert("Os dados inseridos estão incorretos.")
+  }
+  
 
+}
