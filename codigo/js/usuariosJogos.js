@@ -48,3 +48,7 @@ fetch(url, options).then((resposta) => {
       renderizarJogos(jogosAleatorios);
     });
 });
+
+function renederizarPessoas(pessoas){
+  const divPessoas = document.getElementById("pessoas");
+}
