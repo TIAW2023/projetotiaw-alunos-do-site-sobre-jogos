@@ -51,4 +51,29 @@ fetch(url, options).then((resposta) => {
 
 function renederizarPessoas(pessoas){
   const divPessoas = document.getElementById("pessoas");
+  let quantidadePessoas = 10;
+
+  divPessoas.innerHTML = "";
+
+  new URL(location.href).searchParams.get('profile-pfp');
+  new URL(location.href).searchParams.get('profile-name');
+
+  if(pessoas.length < 10){
+    quantidadePessoas = pessoas.length;
+  }
+
+  for(let i = 0; i < quantidadePessoas; i++){
+    const pessoaAtual = pessoas[i];
+
+    divPessoas.innerHTML += `
+    <div class="pessoa">
+      <div>
+        <img src="${pessoaAtual.pfp}"/>
+      </div>
+      <div class="texto-pessoa">
+        <h1>${pessoaAtual.userName}</h1>
+      </div>
+    </div>
+    `;
+  }
 }

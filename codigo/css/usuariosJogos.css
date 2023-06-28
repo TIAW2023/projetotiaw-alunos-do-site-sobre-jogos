@@ -31,21 +31,22 @@ header {
   display: flex;
   gap: 15px;
 }
-a:link, a:visited, a:hover, a:active {
+a:link, a:visited {
   text-decoration: none;
-  color:#1e1e55;
+  color: black;
 }
-.perfil-icon {
-  
+a:hover {
+  color: #1e1e55;
+}
+.perfil-icon { 
   display: flex;
   font-size: 30px;
   align-items: center;
-  color: #0d0d25;
+  color: l;
   transition: color 0.5s;
 }
 .perfil-icon:hover {
   cursor: pointer;
-  color: #1e1e55;
 }
 #jogos {
   display: flex;
