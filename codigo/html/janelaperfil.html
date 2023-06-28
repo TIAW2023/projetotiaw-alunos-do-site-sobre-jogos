@@ -1,66 +1,86 @@
 <!DOCTYPE html>
-<html>
-    <html lang="pt-br"></html>
+<html lang="pt-br">
 <head>
-    <link rel="stylesheet" type="text/css" href="/codigo/css/janelaperfil.css">
+  <link rel="stylesheet" type="text/css" href="/codigo/css/janelaperfil.css">
+  <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+          // Obtém os valores armazenados do armazenamento local
+          var nome = localStorage.getItem('userName');
+          var frase = localStorage.getItem('pfp');
+          var bio = localStorage.getItem('bio');
+
+          // Preenche os elementos com os valores atualizados
+          document.querySelector('.profile-name').textContent = nome;
+          document.querySelector('.profile-description').textContent = frase;
+          document.querySelector('.bio-section p').textContent = bio;
+      });
+    </script>
 </head>
+<div class="header">
+  <div class="header-container"></div>
+  <a href="/codigo/html/jogadores.html" class="header-item">Jogadores</a>
+  <a href="/codigo/html/menuJogos.html" class="header-item">Jogos</a>
+  <a href="/codigo/html/perfil.html" class="header-item">Perfil</a>
+  <a href="/codigo/html/login.html" class="header-item">Login</a>
+  <a href="/codigo/html/janelaperfil.html" class="header-item">janela</a>
+</div>
+</div>
 <body>
-  <div class="page-container">
-    <a href="/codigo/html/jogadores.html" class="close-button">x</a>
-    <div class="profile">
-      <div class="profile-header">
-        <img src="/codigo/img/1977436.jpg" alt="Imagem de Fundo" class="background-image">
-        <img src="/codigo/img/download.jpg" alt= "Imagem de Perfil" class="profile-picture">
-        <h1 class="profile-name">Babner o Calvo</h1>
-        <p class="profile-description">"Á procura de novos amigos calvos"</p>
+<div class="page-container">
+  <a href="/codigo/html/jogadores.html" class="close-button">x</a>
+  <div class="profile">
+    <div class="profile-header">
+      <img src="/codigo/img/1977436.jpg" alt="Imagem de Fundo" class="background-image">
+      <img src="/codigo/img/download.jpg" alt= "Imagem de Perfil" class="profile-picture">
+      <h1 class="profile-name"> </h1>
+      <p class="profile-description"> </p>
+    </div>
+    <div class="profile-content">
+      <div class="bio-section">
+        <h2>Bio</h2>
+        <p> </p>
       </div>
-      <div class="profile-content">
-        <div class="bio-section">
-          <h2>Bio</h2>
-          <p>Quando seguro o controle, sou transportado para um universo onde sou o herói ou a heroína. Os jogos são minha forma de escapar da realidade e mergulhar em aventuras fantásticas. Lá, posso voar pelos céus, lutar contra monstros temíveis ou explorar ruínas misteriosas. Jogar é como abrir asas e voar para além dos limites da imaginação, deixando-me cativar por mundos extraordinários e vivendo histórias que jamais poderia experimentar de outra forma.</p>
-        </div>
-        <h2>Jogos que eu curto</h2>
-        <div class="game-images">
-          <div class="game-item">
-            <div class="game-box">
-              <img src="/codigo/img/1977436.jpg" alt="Game 1">
-              <p>jogo</p>
-            </div>
-          </div>
-          <div class="game-item">
-            <div class="game-box">
-              <img src="/codigo/img/1977436.jpg" alt="Game 2">
-              <p>calvos :(</p>
-            </div>
-          </div>
-          <div class="game-item">
-            <div class="game-box">
-              <img src="/codigo/img/1977436.jpg" alt="Game 3">
-              <p>overwatch</p>
-            </div>
-          </div>
-          <div class="game-item">
-            <div class="game-box">
-              <img src="/codigo/img/1977436.jpg" alt="Game 4">
-              <p>calvos :(</p>
-            </div>
-          </div>
-          <div class="game-item">
-            <div class="game-box">
-              <img src="/codigo/img/1977436.jpg" alt="Game 10">
-              <p>calvos :(</p>
-            </div>
+      <h2>Jogos que eu curto</h2>
+      <div class="game-images">
+        <div class="game-item">
+          <div class="game-box">
+            <img src="/codigo/img/1977436.jpg" alt="Game 1">
+            <p>jogo</p>
           </div>
         </div>
-        <h2>Chama ai</h2>
-        <div class="image-footer">
-            <a href="clicavel.html">
-                <a href="https://discord.gg/PQzmQd55"> <img src="/codigo/img/discord-logo-1-1.png" alt="discord"></a>
-            </a>
+        <div class="game-item">
+          <div class="game-box">
+            <img src="/codigo/img/1977436.jpg" alt="Game 2">
+            <p>calvos :(</p>
+          </div>
         </div>
-     </div>
-   </div>
+        <div class="game-item">
+          <div class="game-box">
+            <img src="/codigo/img/1977436.jpg" alt="Game 3">
+            <p>overwatch</p>
+          </div>
+        </div>
+        <div class="game-item">
+          <div class="game-box">
+            <img src="/codigo/img/1977436.jpg" alt="Game 4">
+            <p>calvos :(</p>
+          </div>
+        </div>
+        <div class="game-item">
+          <div class="game-box">
+            <img src="/codigo/img/1977436.jpg" alt="Game 10">
+            <p>calvos :(</p>
+          </div>
+        </div>
+      </div>
+      <h2>Chama ai</h2>
+      <div class="image-footer">
+        <a href="clicavel.html">
+          <a href="https://discord.gg/PQzmQd55"> <img src="/codigo/img/discord-logo-1-1.png" alt="discord"></a>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
-
 </html>
