@@ -16,6 +16,9 @@ fetch(url, options).then((resposta) => {
 
 
     body.innerHTML += `
+      <div class="favoritar">
+        <i class="fa-solid fa-heart-circle-plus"></i>
+      </div>
       <div class="banner">
         <img src="${jogo.thumbnail}">
       </div>

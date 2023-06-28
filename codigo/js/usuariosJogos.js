@@ -30,7 +30,7 @@ function renderizarJogos(jogos) {
           <p>Gênero: ${jogoAtual.genre}</p>
           </div>
         </div>
-      </a>  
+      </a>
       `;
     }
 }
