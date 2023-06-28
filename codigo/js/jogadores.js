@@ -6,7 +6,6 @@ function exibirUsuario() {
 
         card += `<div class="rectangle">
           <h1>${usuario.userName}</h1>
-
           <div class="content">
             <a href="/codigo/html/janelaperfil.html"> <img src="/codigo/img/download.jpg" alt="Imagem 8"></a>
             <p>${usuario.bio}</p>
