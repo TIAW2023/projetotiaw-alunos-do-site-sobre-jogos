@@ -51,14 +51,14 @@ fetch(url, options).then((resposta) => {
 
 function renederizarPessoas(pessoas){
   const divPessoas = document.getElementById("pessoas");
-  let quantidadePessoas = 10;
+  let quantidadePessoas = 6;
 
   divPessoas.innerHTML = "";
 
   new URL(location.href).searchParams.get('profile-pfp');
   new URL(location.href).searchParams.get('profile-name');
 
-  if(pessoas.length < 10){
+  if(pessoas.length < 6){
     quantidadePessoas = pessoas.length;
   }
 
