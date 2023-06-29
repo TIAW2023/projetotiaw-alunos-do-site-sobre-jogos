@@ -35,7 +35,7 @@ fetch(url, options).then((resposta) => {
 function clicado(titulo) {
   document.getElementById("favoritar").style.color = "red";
   document.getElementById("favoritar").style.cursor = "default";
-  vetor[indice].jogosFavoritos.concat[titulo];
+  vetor[indice].jogoFavoritos.push(titulo);
   console.log(vetor[indice].jogoFavoritos);
   alert(titulo+" adicionado aos favoritos!");
 }
