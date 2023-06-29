@@ -1,4 +1,6 @@
 let bancoUsuarios = JSON.parse(localStorage.getItem("dadosUsuarios"));
+let indice = JSON.parse(localStorage.getItem("Logado"));
+console.log(indice);
 function exibirUsuario() {
     var card = "";
     for (let i = 0; i < bancoUsuarios.length; i++) {
@@ -18,7 +20,7 @@ function exibirUsuario() {
 function mostrarUsuario(){
     var card = "";
 
-    const id = document.querySelectorAll("java").forEach;
+    const id = document.querySelectorAll('#java').forEach;
     
     button.addEventListener( function(event) {
     const el = event.target || event.srcElement;
