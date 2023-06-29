@@ -14,7 +14,6 @@ fetch(url, options).then((resposta) => {
     const [jogo] = jogos.filter((jogo) => jogo.id == id);
     const body = document.querySelector("body");
 
-
     body.innerHTML += `
       <div class="favoritar">
         <i class="fa-solid fa-heart-circle-plus"></i>
@@ -31,3 +30,4 @@ fetch(url, options).then((resposta) => {
     `;
   });
 });
+
