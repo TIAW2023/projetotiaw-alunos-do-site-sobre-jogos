@@ -3,17 +3,17 @@
 <head>
   <link rel="stylesheet" type="text/css" href="/codigo/css/janelaperfil.css">
   <script>
-      window.addEventListener('DOMContentLoaded', (event) => {
-          // Obtém os valores armazenados do armazenamento local
-          var nome = localStorage.getItem('userName');
-          var frase = localStorage.getItem('pfp');
-          var bio = localStorage.getItem('bio');
+ window.addEventListener('DOMContentLoaded', (event) => {
+      // Obtém os valores armazenados do armazenamento local
+      var nome = localStorage.getItem('userName');
+      var frase = localStorage.getItem('pfp');
+      var bio = localStorage.getItem('bio');
 
-          // Preenche os elementos com os valores atualizados
-          document.querySelector('.profile-name').textContent = nome;
-          document.querySelector('.profile-description').textContent = frase;
-          document.querySelector('.bio-section p').textContent = bio;
-      });
+      // Preenche os elementos com os valores atualizados
+      document.querySelector('.profile-name').textContent = nome;
+      document.querySelector('.profile-description').textContent = frase;
+      document.querySelector('.bio-section p').textContent = bio;
+    });
     </script>
 </head>
 <div class="header">
@@ -76,11 +76,32 @@
       <h2>Chama ai</h2>
       <div class="image-footer">
         <a href="clicavel.html">
-          <a href="https://discord.gg/PQzmQd55"> <img src="/codigo/img/discord-logo-1-1.png" alt="discord"></a>
+          <a href="https://discord.gg/xEh72uVmT"> <img src="/codigo/img/discord-logo-1-1.png" alt="discord"></a>
         </a>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+  // Obtém os dados do usuário logado
+  const idLogado = localStorage.getItem('Logado');
+  const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'));
+
+  // Verifica se o usuário está logado e se existem dados do usuário
+  if (idLogado !== null && idLogado >= 0 && idLogado < dadosUsuario.length) {
+    const profileName = document.querySelector('.profile-name');
+    const profileDescription = document.querySelector('.profile-description');
+    const bioSection = document.querySelector('.bio-section');
+
+    // Preenche os campos com os dados do usuário logado
+    profileName.textContent = dadosUsuario[idLogado].userName;
+    profileDescription.textContent = dadosUsuario[idLogado].pfp;
+    bioSection.querySelector('p').textContent = dadosUsuario[idLogado].bio;
+  }
+});
+</script>
+
 </body>
 </html>
