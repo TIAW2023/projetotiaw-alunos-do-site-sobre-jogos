@@ -36,8 +36,8 @@ function salvarDados() {
       userName: "",
       pfp: "",
       bio: "",
-      jogoFavoritos: ["Jogos"],
-      categoriasFavoritas: ["Categorias"],
+      jogoFavoritos: [],
+      categoriasFavoritas: [],
     }
     dadosUsuario.push(dados);
     localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
