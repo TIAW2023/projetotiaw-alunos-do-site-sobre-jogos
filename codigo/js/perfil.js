@@ -4,12 +4,12 @@ function handleImageClick() {
   const bioSection = document.querySelector('.bio-section');
   const saveButton = document.querySelector('#save-button');
 
-  //  faz ficar editávei
+  // Torna os campos editáveis
   profileName.contentEditable = true;
   profileDescription.contentEditable = true;
   bioSection.querySelector('p').contentEditable = true;
 
-  // aparece o botão de salvar
+  // Exibe o botão de salvar
   saveButton.style.display = 'block';
 
   // Foca no campo do nome
@@ -23,56 +23,27 @@ function saveProfileData() {
 
   // Obtém os valores dos campos
   const userName = profileName.textContent;
-  const pfp = profileDescription.textContent;
+  const pfp = localStorage.getItem('pfp');
   const bio = bioSection.querySelector('p').textContent;
 
-  // Verifica se há dados de usuário no Local Storage
-  let dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'));
-  if (!dadosUsuario) {
-    dadosUsuario = [];
-  }
+  // Salva os dados no Local Storage
+  const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario')) || [];
+  const logadoIndex = localStorage.getItem('Logado');
+  const usuarioLogado = dadosUsuario[logadoIndex];
+  usuarioLogado.userName = userName;
+  usuarioLogado.pfp = pfp;
+  usuarioLogado.bio = bio;
+  dadosUsuario[logadoIndex] = usuarioLogado;
+  localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
 
-  // Obtém o índice do usuário logado
-  const idLogado = localStorage.getItem('Logado');
+  // Desativa a edição
+  profileName.contentEditable = false;
+  profileDescription.contentEditable = false;
+  bioSection.querySelector('p').contentEditable = false;
 
-  // Atualiza os dados do usuário logado
-  if (idLogado !== null && idLogado >= 0 && idLogado < dadosUsuario.length) {
-    dadosUsuario[idLogado].userName = userName;
-    dadosUsuario[idLogado].pfp = pfp;
-    dadosUsuario[idLogado].bio = bio;
-
-    // Salva os dados atualizados no Local Storage
-    localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
-
-    // Exibe uma mensagem de sucesso
-    alert('Dados do perfil salvos com sucesso.');
-
-    // Esconde o botão de salvar
-    saveButton.style.display = 'none';
-  } else {
-    // Tratar o caso em que não há usuário logado ou o ID é inválido
-    alert('Erro ao salvar os dados do perfil.');
-  }
-}
-
-// Verifica se existem dados salvos no Local Storage
-const savedUserData = localStorage.getItem('dadosUsuario');
-if (savedUserData) {
-  const dadosUsuario = JSON.parse(savedUserData);
-
-  // Obtém o índice do usuário logado
-  const idLogado = localStorage.getItem('Logado');
-
-  // Preenche os campos com os dados do usuário logado
-  if (idLogado !== null && idLogado >= 0 && idLogado < dadosUsuario.length) {
-    const profileName = document.querySelector('.profile-name');
-    const profileDescription = document.querySelector('.profile-description');
-    const bioSection = document.querySelector('.bio-section');
-
-    profileName.textContent = dadosUsuario[idLogado].userName;
-    profileDescription.textContent = dadosUsuario[idLogado].pfp;
-    bioSection.querySelector('p').textContent = dadosUsuario[idLogado].bio;
-  }
+  // Oculta o botão de salvar
+  const saveButton = document.querySelector('#save-button');
+  saveButton.style.display = 'none';
 }
 
 // Imagem clicável
@@ -84,6 +55,3 @@ clickableImage.addEventListener('click', handleImageClick);
 // Botão de salvar
 const saveButton = document.querySelector('#save-button');
 saveButton.addEventListener('click', saveProfileData);
-
-
-
