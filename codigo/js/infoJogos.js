@@ -1,6 +1,4 @@
 const id = new URL(window.location.href).searchParams.get("id");
-var indice = JSON.parse(localStorage.getItem('Logado'));
-var vetor = JSON.parse(localStorage.getItem('dadosUsuario'));
 const url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
 const options = {
   method: "GET",
@@ -33,11 +31,13 @@ fetch(url, options).then((resposta) => {
 });
 
 function clicado(titulo) {
+  var indice = JSON.parse(localStorage.getItem('Logado'));
+  var vetor = JSON.parse(localStorage.getItem('dadosUsuario'));
   document.getElementById("favoritar").style.color = "red";
   document.getElementById("favoritar").style.cursor = "default";
   vetor[indice].jogoFavoritos.push(titulo);
-  var vetorString = JSON.stringify(vetor[indice]);
-  localStorage.setItem('dadosUsuario', vetorString);
+  localStorage.setItem('dadosUsuario', JSON.stringify(vetor));
+  //Código feito por Rafael Sanzio
   console.log(vetor[indice].jogoFavoritos);
   alert(titulo+" adicionado aos favoritos!");
 }
