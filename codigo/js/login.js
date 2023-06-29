@@ -22,7 +22,12 @@ function salvarDados() {
     return;
   }
   else if(senha === ""){
-    window.alert("Senha inválida inserida")
+    window.alert("Senha inválida inserida");
+    return;
+  }
+  else if(email.indexOf("@")){
+    window.alert("Favor inserir um email válido");
+    return;
   }
   else{
     var dados = {
@@ -37,7 +42,8 @@ function salvarDados() {
     dadosUsuario.push(dados);
     localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
     alert('Registro efetuado com sucesso.');
-    window.location.href = "../html/login.html";
+    window.location.href = "../html/perfil.html";
+
   }
 }
 
@@ -51,7 +57,7 @@ function entrarSite() {
       let id = i;
       localStorage.setItem('Logado', id);
       alert("Login efetuado com sucesso");
-      window.location.href = "../html/index.html";
+      window.open("../html/index.html");
       contador++;
     }
     
@@ -59,5 +65,6 @@ function entrarSite() {
   if(contador == 0){
     alert("Os dados inseridos estão incorretos.")
   }
+  
 
 }
