@@ -21,7 +21,7 @@ body {
     color: black;
 }
   
-h1{
+h1 {
     color: black;
     font-size: 40px;
     font-weight: 00;
@@ -49,6 +49,8 @@ h1{
     width: 800px;
     border-radius: 20px;
 }
+
 .favoritar{
-    font-size: 20px;
+    font-size: 35px;
+    color: #000000;
 }
