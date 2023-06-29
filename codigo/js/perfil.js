@@ -67,3 +67,21 @@ if (savedBio) {
 // Adiciona um evento de clique ao botão de salvar
 const saveButton = document.querySelector('#save-button');
 saveButton.addEventListener('click', saveInformation);
+
+function handleImageClick() {
+  const profileName = document.querySelector('.profile-name');
+  const profileDescription = document.querySelector('.profile-description');
+  const bioSection = document.querySelector('.bio-section');
+  const saveButton = document.querySelector('#save-button');
+
+  // Torna os campos editáveis
+  profileName.contentEditable = true;
+  profileDescription.contentEditable = true;
+  bioSection.querySelector('p').contentEditable = true;
+
+  // Exibe o botão de salvar
+  saveButton.style.display = 'block';
+
+  // Foca no campo do nome
+  profileName.focus();
+}
