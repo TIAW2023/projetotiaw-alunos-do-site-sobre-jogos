@@ -41,6 +41,3 @@ function clicado(titulo) {
   console.log(vetor[indice].jogoFavoritos);
   alert(titulo+" adicionado aos favoritos!");
 }
-
-
-
