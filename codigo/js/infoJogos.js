@@ -36,6 +36,8 @@ function clicado(titulo) {
   document.getElementById("favoritar").style.color = "red";
   document.getElementById("favoritar").style.cursor = "default";
   vetor[indice].jogoFavoritos.push(titulo);
+  var vetorString = JSON.stringify(vetor[indice]);
+  localStorage.setItem('dadosUsuario', vetorString);
   console.log(vetor[indice].jogoFavoritos);
   alert(titulo+" adicionado aos favoritos!");
 }
