@@ -25,7 +25,7 @@ function salvarDados() {
     window.alert("Senha inválida inserida");
     return;
   }
-  else if(email.indexOf("@")){
+  else if(email.indexOf("@") == -1){
     window.alert("Favor inserir um email válido");
     return;
   }
