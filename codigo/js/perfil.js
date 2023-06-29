@@ -4,45 +4,48 @@ function handleImageClick() {
   const bioSection = document.querySelector('.bio-section');
   const saveButton = document.querySelector('#save-button');
 
-  // faz as coisas serem editáveis
+  // Torna os campos editáveis
   profileName.contentEditable = true;
   profileDescription.contentEditable = true;
   bioSection.querySelector('p').contentEditable = true;
 
-  // botão de salvar
+  // Exibe o botão de salvar
   saveButton.style.display = 'block';
 
-  // foco no nome
+  // Foca no campo do nome
   profileName.focus();
 }
 
-// Função de salvar as informações no localStorage
+// Função para salvar as informações no localStorage da página de login
 function saveInformation() {
   const profileName = document.querySelector('.profile-name');
   const profileDescription = document.querySelector('.profile-description');
   const bioSection = document.querySelector('.bio-section');
   const saveButton = document.querySelector('#save-button');
 
+  // Salva as informações no localStorage da página de perfil
   localStorage.setItem('userName', profileName.textContent);
   localStorage.setItem('pfp', profileDescription.textContent);
   localStorage.setItem('bio', bioSection.querySelector('p').textContent);
 
-  // Desativa o editar e esconde o botão de salvar
+  // Desativa a edição
   profileName.contentEditable = false;
   profileDescription.contentEditable = false;
   bioSection.querySelector('p').contentEditable = false;
+
+  // Oculta o botão de salvar
   saveButton.style.display = 'none';
 }
 
-// imagem clicável
+// Imagem clicável
 const clickableImage = document.querySelector('.small-image');
 
-// evento de clique à imagem
+// Evento de clique na imagem
 clickableImage.addEventListener('click', handleImageClick);
 
-// Verifica se existem valores salvos no localStorage
+// Verifica se existem valores salvos no localStorage da página de login
 const savedName = localStorage.getItem('userName');
-const savedDescription = localStorage.getItem('pfp');
+const savedPfp = localStorage.getItem('pfp');
 const savedBio = localStorage.getItem('bio');
 
 // Atualiza os elementos com os valores salvos
@@ -51,9 +54,9 @@ if (savedName) {
   profileName.textContent = savedName;
 }
 
-if (savedDescription) {
+if (savedPfp) {
   const profileDescription = document.querySelector('.profile-description');
-  profileDescription.textContent = savedDescription;
+  profileDescription.textContent = savedPfp;
 }
 
 if (savedBio) {
@@ -61,6 +64,6 @@ if (savedBio) {
   bioSection.querySelector('p').textContent = savedBio;
 }
 
-// Adiciona um evento no botão de salvar
+// Adiciona um evento de clique ao botão de salvar
 const saveButton = document.querySelector('#save-button');
 saveButton.addEventListener('click', saveInformation);
