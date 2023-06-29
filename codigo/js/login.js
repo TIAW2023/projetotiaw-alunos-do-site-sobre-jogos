@@ -34,7 +34,7 @@ function salvarDados() {
   dadosUsuario.push(dados);
   localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
   alert('Registro efetuado com sucesso.');
-  window.open("../html/perfil.html");
+  window.location.href = "https://www.youtube.com";
 }
 
 var contador = 0;
@@ -47,7 +47,7 @@ function entrarSite() {
       let id = i;
       localStorage.setItem('Logado', id);
       alert("Login efetuado com sucesso");
-      window.open("../html/perfil.html");
+      window.location.href = "/html/perfil.html";
       contador++;
     }
     
