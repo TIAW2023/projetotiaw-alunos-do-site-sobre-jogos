@@ -48,7 +48,8 @@ label {
 }  
 #options {
     border: 2px solid darkgray;
-    background-color: rgba(160, 160, 160, 0.2);
+    background-color: #1e1e55;
+    color: white;
 }
 #buscar {
     border-radius: 5px;
