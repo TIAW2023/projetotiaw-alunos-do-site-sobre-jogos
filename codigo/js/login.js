@@ -37,8 +37,7 @@ function salvarDados() {
     dadosUsuario.push(dados);
     localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
     alert('Registro efetuado com sucesso.');
-    window.location.href = "../html/index.html";
-
+    window.location.href = "../html/login.html";
   }
 }
 
@@ -60,6 +59,5 @@ function entrarSite() {
   if(contador == 0){
     alert("Os dados inseridos estão incorretos.")
   }
-  
 
 }
