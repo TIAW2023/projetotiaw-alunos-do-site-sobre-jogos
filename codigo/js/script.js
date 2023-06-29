@@ -33,22 +33,45 @@ function prevSlider() {
   showSlider()
 }
 function clicado(){
-    if(indice<0){
-        alert("pinto")
+    if(indice===null){
+        alert("LOGIN NECESSÁRIO!")
+        window.location.href = "/codigo/html/login.html";
     }
     else{
-        alert("SUCESSO!!")
+        
+        window.location.href = "/codigo/html/usuariosJogos.html";
     }
-
 }
+function clickjog(){
+  if(indice===null){
+      alert("LOGIN NECESSÁRIO!")
+      window.location.href = "/codigo/html/login.html";
+  }
+  else{
+      
+      window.location.href = "/codigo/html/jogadores.html";
+  }
+}
+function clickdisc(){
+  if(indice===null){
+      alert("LOGIN NECESSÁRIO!")
+      window.location.href = "";
+  }
+  else{
+     
+      window.location.href = "/codigo/html/";
+  }
+}
+
+
 function menuShow() {
     let menuMobile = document.querySelector('.mobile-menu');
     if (menuMobile.classList.contains('open')) {
         menuMobile.classList.remove('open');
-        document.querySelector('.icon').src = "/img/menu_white_36dp.svg";
+        document.querySelector('.icon').src = "/codigo/img/close_white_36dp.svg";
     } else {
         menuMobile.classList.add('open');
-        document.querySelector('.icon').src = "/img/close_white_36dp.svg";
+        document.querySelector('.icon').src = "/codigo/img/close_white_36dp.svg";
     }
 }
 
