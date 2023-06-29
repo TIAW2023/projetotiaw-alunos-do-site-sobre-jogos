@@ -26,7 +26,7 @@ function salvarDados() {
     return;
   }
   else if(email.indexOf("@") == -1){
-    window.alert("Favor inserir um email válido");
+    window.alert("Insira um email válido");
     return;
   }
   else{
