@@ -16,7 +16,7 @@ fetch(url, options).then((resposta) => {
 
     body.innerHTML += `
       <div class="favoritar">
-        <i class="fa-solid fa-heart-circle-plus"></i>
+        <i class="fa-solid fa-heart" id="favoritar" onclick="clicado()"></i>
       </div>
       <div class="banner">
         <img src="${jogo.thumbnail}">
@@ -30,4 +30,12 @@ fetch(url, options).then((resposta) => {
     `;
   });
 });
+
+function clicado() {
+  document.getElementById("favoritar").style.color = "red";
+  document.getElementById("favoritar").style.cursor = "default";
+  alert("Jogo adicionado aos favoritos!");
+}
+
+
 

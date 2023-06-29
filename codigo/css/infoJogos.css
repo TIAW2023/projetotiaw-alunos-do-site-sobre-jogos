@@ -50,7 +50,8 @@ h1 {
     border-radius: 20px;
 }
 
-.favoritar{
+#favoritar{
     font-size: 35px;
     color: #000000;
+    cursor: pointer;
 }
