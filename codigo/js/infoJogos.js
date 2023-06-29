@@ -1,5 +1,6 @@
 const id = new URL(window.location.href).searchParams.get("id");
-
+var indice = JSON.parse(localStorage.getItem('Logado'));
+var vetor = JSON.parse(localStorage.getItem('dadosUsuario'));
 const url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
 const options = {
   method: "GET",
@@ -16,7 +17,7 @@ fetch(url, options).then((resposta) => {
 
     body.innerHTML += `
       <div class="favoritar">
-        <i class="fa-solid fa-heart" id="favoritar" onclick="clicado()"></i>
+        <i class="fa-solid fa-heart" id="favoritar" onclick="clicado('${jogo.title}')"></i>
       </div>
       <div class="banner">
         <img src="${jogo.thumbnail}">
@@ -31,10 +32,12 @@ fetch(url, options).then((resposta) => {
   });
 });
 
-function clicado() {
+function clicado(titulo) {
   document.getElementById("favoritar").style.color = "red";
   document.getElementById("favoritar").style.cursor = "default";
-  alert("Jogo adicionado aos favoritos!");
+  vetor[indice].jogosFavoritos = vetor[indice].jogosFavoritos.push(titulo);
+  console.log(vetor[indice].jogoFavoritos);
+  alert(titulo+" adicionado aos favoritos!");
 }
 
 
