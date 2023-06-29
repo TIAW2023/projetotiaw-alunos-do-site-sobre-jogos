@@ -84,3 +84,6 @@ clickableImage.addEventListener('click', handleImageClick);
 // Botão de salvar
 const saveButton = document.querySelector('#save-button');
 saveButton.addEventListener('click', saveProfileData);
+
+
+
