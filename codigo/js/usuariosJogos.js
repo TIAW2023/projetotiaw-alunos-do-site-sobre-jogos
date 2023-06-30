@@ -83,7 +83,7 @@ function carregarUsuarios(){
   const perfil = document.getElementById("usuarios");
   console.log(bancoUsuarios);
   for(let i = 0; i < bancoUsuarios.length; i++){
-    perfil.innerHTML += `<div class="pessoa">
+    perfil.innerHTML += `<div class="pessoa" onclick="teste('${i}')">
     <a href="/codigo/html/janelaperfil.html" target="_blank">
       <img src="https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" alt="Imagem 8">
     </a>
@@ -96,4 +96,9 @@ onload = () => {
 }
 function pessoas(){
   window.location.href = "/codigo/html/jogadores.html";
+}
+
+function teste (id){
+  sessionStorage.setItem("chave", id)
+  window.location.href = "/codigo/html/janelaperfil.html";
 }

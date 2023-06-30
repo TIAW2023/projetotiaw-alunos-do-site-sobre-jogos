@@ -16,6 +16,8 @@
       document.querySelector('.profile-description').textContent = frase;
       document.querySelector('.bio-section p').textContent = bio;
     });
+    let val = sessionStorage.getItem("chave");
+
   </script>
 </head>
 <body>
@@ -83,13 +85,14 @@
       const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'));
 
       if (idLogado !== null && idLogado >= 0 && idLogado < dadosUsuario.length) {
+        console.log(val);
         const profileName = document.querySelector('.profile-name');
         const profileDescription = document.querySelector('.profile-description');
         const bioSection = document.querySelector('.bio-section');
         
-        profileName.textContent = dadosUsuario[idLogado].userName;
-        profileDescription.textContent = dadosUsuario[idLogado].pfp;
-        bioSection.querySelector('p').textContent = dadosUsuario[idLogado].bio;
+        profileName.textContent = dadosUsuario[val].userName;
+        profileDescription.textContent = dadosUsuario[val].pfp;
+        bioSection.querySelector('p').textContent = dadosUsuario[val].bio;
       }
     });
   </script>
