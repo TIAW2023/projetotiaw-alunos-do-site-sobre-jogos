@@ -59,7 +59,7 @@ function clickdisc(){
   }
   else{
      
-      window.location.href = "#";
+      window.location.href = "https://discord.gg/pkMY9UdJ";
   }
 }
 

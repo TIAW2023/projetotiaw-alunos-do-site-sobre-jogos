@@ -42,7 +42,7 @@ function salvarDados() {
     dadosUsuario.push(dados);
     localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
     alert('Registro efetuado com sucesso.');
-    window.location.href = "../html/perfil.html";
+    window.open("../html/perfil.html");
 
   }
 }
