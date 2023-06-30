@@ -36,7 +36,6 @@ function clicado(titulo) {
   document.getElementById("favoritar").style.cursor = "default";
   vetor[indice].jogoFavoritos.push(titulo);
   localStorage.setItem('dadosUsuario', JSON.stringify(vetor));
-  //Código feito por Rafael Sanzio
   console.log(vetor[indice].jogoFavoritos);
   alert(titulo + " adicionado aos favoritos!");
 }
