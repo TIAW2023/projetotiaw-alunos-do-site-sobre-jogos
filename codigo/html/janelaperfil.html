@@ -18,16 +18,6 @@
     });
   </script>
 </head>
-<div class="header">
-  <div class="header-container"></div>
-  <a href="/codigo/html/jogadores.html" class="header-item">Jogadores</a>
-  <a href="/codigo/html/menuJogos.html" class="header-item">Jogos</a>
-  <a href="/codigo/html/perfil.html" class="header-item">Perfil</a>
-  <a href="/codigo/html/login.html" class="header-item">Login</a>
-  <a href="/codigo/html/janelaperfil.html" class="header-item">janela</a>
-</div>
-</div>
-
 <body>
   <div class="page-container">
     <a href="/codigo/html/jogadores.html" class="close-button">x</a>
@@ -103,6 +93,49 @@
       }
     });
   </script>
+
+<script>
+  function loadFavoriteGames() {
+  const idLogado = localStorage.getItem('Logado');
+  const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'));
+  const gameImagesContainer = document.querySelector('.game-images');
+
+  // Verifica se o usuário está logado e se existem dados do usuário
+  if (idLogado !== null && idLogado >= 0 && idLogado < dadosUsuario.length) {
+    const jogosFavoritos = dadosUsuario[idLogado].jogoFavoritos;
+
+    // Limpa o conteúdo atual da caixa de jogos favoritos
+    gameImagesContainer.innerHTML = '';
+
+    // Preenche a caixa de jogos favoritos
+    for (let i = 0; i < jogosFavoritos.length; i++) {
+      const jogoFavorito = jogosFavoritos[i];
+
+      // Cria a caixa de jogo favorito
+      const gameItem = document.createElement('div');
+      gameItem.classList.add('game-item');
+
+      const gameBox = document.createElement('div');
+      gameBox.classList.add('game-box');
+
+      const gameImage = document.createElement('img');
+      gameImage.src = ''; // Defina o caminho da imagem do jogo favorito aqui
+      gameImage.alt = 'Game Image';
+
+      const gameTitle = document.createElement('p');
+      gameTitle.textContent = jogoFavorito;
+
+      gameBox.appendChild(gameImage);
+      gameBox.appendChild(gameTitle);
+      gameItem.appendChild(gameBox);
+      gameImagesContainer.appendChild(gameItem);
+    }
+  }
+}
+
+// Chame a função loadFavoriteGames() para preencher a caixa de jogos favoritos no carregamento da página
+loadFavoriteGames();
+</script>
 
 </body>
 
