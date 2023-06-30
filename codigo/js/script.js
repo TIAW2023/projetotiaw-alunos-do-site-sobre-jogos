@@ -52,6 +52,16 @@ function clickjog(){
       window.location.href = "/codigo/html/jogadores.html";
   }
 }
+function clickperf(){
+  if(indice===null){
+      alert("LOGIN NECESSÁRIO!")
+      window.location.href = "/codigo/html/login.html";
+  }
+  else{
+     
+      window.location.href = "/codigo/html/perfil.html";
+  }
+}
 function clickdisc(){
   if(indice===null){
       alert("LOGIN NECESSÁRIO!")
