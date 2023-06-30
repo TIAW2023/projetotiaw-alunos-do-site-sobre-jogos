@@ -1,57 +1,60 @@
-function handleImageClick() {
-  const profileName = document.querySelector('.profile-name');
-  const profileDescription = document.querySelector('.profile-description');
-  const bioSection = document.querySelector('.bio-section');
-  const saveButton = document.querySelector('#save-button');
+document.addEventListener("DOMContentLoaded", function() {
+  const profileName = document.querySelector(".profile-name");
+  const profileDescription = document.querySelector(".profile-description");
+  const profileBio = document.getElementById("profileBio");
+  const saveButton = document.getElementById("save-button");
 
-  // Torna os campos editáveis
-  profileName.contentEditable = true;
-  profileDescription.contentEditable = true;
-  bioSection.querySelector('p').contentEditable = true;
+  // Obtém os dados do usuário do localStorage
+  const dadosUsuario = JSON.parse(localStorage.getItem("dadosUsuario"));
 
-  // Exibe o botão de salvar
-  saveButton.style.display = 'block';
+  // Verifica se os dados existem e preenche as informações do perfil
+  if (dadosUsuario) {
+    const usuarioLogadoId = localStorage.getItem("Logado");
+    const usuarioLogado = dadosUsuario[usuarioLogadoId];
 
-  // Foca no campo do nome
-  profileName.focus();
-}
+    profileName.textContent = usuarioLogado.userName;
+    profileDescription.textContent = usuarioLogado.pfp;
+    profileBio.textContent = usuarioLogado.bio;
+  }
 
-function saveProfileData() {
-  const profileName = document.querySelector('.profile-name');
-  const profileDescription = document.querySelector('.profile-description');
-  const bioSection = document.querySelector('.bio-section');
+  // Torna os campos editáveis e exibe o botão de salvar
+  function ativarEdicao() {
+    profileName.contentEditable = true;
+    profileDescription.contentEditable = true;
+    profileBio.contentEditable = true;
+    saveButton.style.display = "block";
+    profileName.focus();
+  }
 
-  // Obtém os valores dos campos
-  const userName = profileName.textContent;
-  const pfp = localStorage.getItem('pfp');
-  const bio = bioSection.querySelector('p').textContent;
+  // Desativa a edição e oculta o botão de salvar
+  function desativarEdicao() {
+    profileName.contentEditable = false;
+    profileDescription.contentEditable = false;
+    profileBio.contentEditable = false;
+    saveButton.style.display = "none";
+  }
 
-  // Salva os dados no Local Storage
-  const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario')) || [];
-  const logadoIndex = localStorage.getItem('Logado');
-  const usuarioLogado = dadosUsuario[logadoIndex];
-  usuarioLogado.userName = userName;
-  usuarioLogado.pfp = pfp;
-  usuarioLogado.bio = bio;
-  dadosUsuario[logadoIndex] = usuarioLogado;
-  localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
+  // Salva os dados editados
+  function salvarDados() {
+    if (dadosUsuario) {
+      const usuarioLogadoId = localStorage.getItem("Logado");
+      const usuarioLogado = dadosUsuario[usuarioLogadoId];
 
-  // Desativa a edição
-  profileName.contentEditable = false;
-  profileDescription.contentEditable = false;
-  bioSection.querySelector('p').contentEditable = false;
+      usuarioLogado.userName = profileName.textContent;
+      usuarioLogado.pfp = profileDescription.textContent;
+      usuarioLogado.bio = profileBio.textContent;
 
-  // Oculta o botão de salvar
-  const saveButton = document.querySelector('#save-button');
-  saveButton.style.display = 'none';
-}
+      localStorage.setItem("dadosUsuario", JSON.stringify(dadosUsuario));
+    }
+  }
 
-// Imagem clicável
-const clickableImage = document.querySelector('.small-image');
+  // Adiciona o evento de clique na imagem
+  const clickableImage = document.querySelector(".small-image");
+  clickableImage.addEventListener("click", ativarEdicao);
 
-// Evento de clique na imagem
-clickableImage.addEventListener('click', handleImageClick);
-
-// Botão de salvar
-const saveButton = document.querySelector('#save-button');
-saveButton.addEventListener('click', saveProfileData);
+  // Adiciona o evento de clique no botão de salvar
+  saveButton.addEventListener("click", function() {
+    salvarDados();
+    desativarEdicao();
+  });
+});
