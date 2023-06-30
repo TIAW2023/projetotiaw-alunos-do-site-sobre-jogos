@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <title>GamersOn</title>
   <link rel="shortcut icon" href="/codigo/img/icon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="/codigo/css/janelaperfil.css">
   <script>
- window.addEventListener('DOMContentLoaded', (event) => {
-      // Obtém os valores armazenados do armazenamento local
+    window.addEventListener('DOMContentLoaded', (event) => {
       var nome = localStorage.getItem('userName');
       var frase = localStorage.getItem('pfp');
       var bio = localStorage.getItem('bio');
 
-      // Preenche os elementos com os valores atualizados
+
       document.querySelector('.profile-name').textContent = nome;
       document.querySelector('.profile-description').textContent = frase;
       document.querySelector('.bio-section p').textContent = bio;
     });
-    </script>
+  </script>
 </head>
 <div class="header">
   <div class="header-container"></div>
@@ -27,83 +27,83 @@
   <a href="/codigo/html/janelaperfil.html" class="header-item">janela</a>
 </div>
 </div>
+
 <body>
-<div class="page-container">
-  <a href="/codigo/html/jogadores.html" class="close-button">x</a>
-  <div class="profile">
-    <div class="profile-header">
-      <img src="/codigo/img/1977436.jpg" alt="Imagem de Fundo" class="background-image">
-      <img src="/codigo/img/download.jpg" alt= "Imagem de Perfil" class="profile-picture">
-      <h1 class="profile-name"> </h1>
-      <p class="profile-description"> </p>
-    </div>
-    <div class="profile-content">
-      <div class="bio-section">
-        <h2>Bio</h2>
-        <p> </p>
+  <div class="page-container">
+    <a href="/codigo/html/jogadores.html" class="close-button">x</a>
+    <div class="profile">
+      <div class="profile-header">
+        <img src="/codigo/img/1977436.jpg" alt="Imagem de Fundo" class="background-image">
+        <img src="/codigo/img/download.jpg" alt="Imagem de Perfil" class="profile-picture">
+        <h1 class="profile-name"> </h1>
+        <p class="profile-description"> </p>
       </div>
-      <h2>Jogos que eu curto</h2>
-      <div class="game-images">
-        <div class="game-item">
-          <div class="game-box">
-            <img src="/codigo/img/1977436.jpg" alt="Game 1">
-            <p>jogo</p>
+      <div class="profile-content">
+        <div class="bio-section">
+          <h2>Bio</h2>
+          <p> </p>
+        </div>
+        <h2>Jogos que eu curto</h2>
+        <div class="game-images">
+          <div class="game-item">
+            <div class="game-box">
+              <img src="/codigo/img/1977436.jpg" alt="Game 1">
+              <p>jogo</p>
+            </div>
+          </div>
+          <div class="game-item">
+            <div class="game-box">
+              <img src="/codigo/img/1977436.jpg" alt="Game 2">
+              <p>calvos :(</p>
+            </div>
+          </div>
+          <div class="game-item">
+            <div class="game-box">
+              <img src="/codigo/img/1977436.jpg" alt="Game 3">
+              <p>overwatch</p>
+            </div>
+          </div>
+          <div class="game-item">
+            <div class="game-box">
+              <img src="/codigo/img/1977436.jpg" alt="Game 4">
+              <p>calvos :(</p>
+            </div>
+          </div>
+          <div class="game-item">
+            <div class="game-box">
+              <img src="/codigo/img/1977436.jpg" alt="Game 10">
+              <p>calvos :(</p>
+            </div>
           </div>
         </div>
-        <div class="game-item">
-          <div class="game-box">
-            <img src="/codigo/img/1977436.jpg" alt="Game 2">
-            <p>calvos :(</p>
-          </div>
+        <h2>Chama ai</h2>
+        <div class="image-footer">
+          <a href="clicavel.html">
+            <a href="https://discord.gg/xEh72uVmT"> <img src="/codigo/img/discord-logo-1-1.png" alt="discord"></a>
+          </a>
         </div>
-        <div class="game-item">
-          <div class="game-box">
-            <img src="/codigo/img/1977436.jpg" alt="Game 3">
-            <p>overwatch</p>
-          </div>
-        </div>
-        <div class="game-item">
-          <div class="game-box">
-            <img src="/codigo/img/1977436.jpg" alt="Game 4">
-            <p>calvos :(</p>
-          </div>
-        </div>
-        <div class="game-item">
-          <div class="game-box">
-            <img src="/codigo/img/1977436.jpg" alt="Game 10">
-            <p>calvos :(</p>
-          </div>
-        </div>
-      </div>
-      <h2>Chama ai</h2>
-      <div class="image-footer">
-        <a href="clicavel.html">
-          <a href="https://discord.gg/xEh72uVmT"> <img src="/codigo/img/discord-logo-1-1.png" alt="discord"></a>
-        </a>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-  window.addEventListener('DOMContentLoaded', function() {
-  // Obtém os dados do usuário logado
-  const idLogado = localStorage.getItem('Logado');
-  const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'));
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
 
-  // Verifica se o usuário está logado e se existem dados do usuário
-  if (idLogado !== null && idLogado >= 0 && idLogado < dadosUsuario.length) {
-    const profileName = document.querySelector('.profile-name');
-    const profileDescription = document.querySelector('.profile-description');
-    const bioSection = document.querySelector('.bio-section');
+      const idLogado = localStorage.getItem('Logado');
+      const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'));
 
-    // Preenche os campos com os dados do usuário logado
-    profileName.textContent = dadosUsuario[idLogado].userName;
-    profileDescription.textContent = dadosUsuario[idLogado].pfp;
-    bioSection.querySelector('p').textContent = dadosUsuario[idLogado].bio;
-  }
-});
-</script>
+      if (idLogado !== null && idLogado >= 0 && idLogado < dadosUsuario.length) {
+        const profileName = document.querySelector('.profile-name');
+        const profileDescription = document.querySelector('.profile-description');
+        const bioSection = document.querySelector('.bio-section');
+        
+        profileName.textContent = dadosUsuario[idLogado].userName;
+        profileDescription.textContent = dadosUsuario[idLogado].pfp;
+        bioSection.querySelector('p').textContent = dadosUsuario[idLogado].bio;
+      }
+    });
+  </script>
 
 </body>
+
 </html>
