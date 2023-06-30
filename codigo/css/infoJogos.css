@@ -55,6 +55,26 @@ h1 {
     color: #000000;
     cursor: pointer;
 }
+.header {
+    background-color: #111c31;
+    padding: 20px;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .header-item {
+    margin-right: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #203158;
+    border-radius: 5px;
+  }
 
 @media (max-width: 1024px){
     .banner img{
@@ -67,5 +87,6 @@ h1 {
         font-size: 1rem;
     }
 }
+
 
 
