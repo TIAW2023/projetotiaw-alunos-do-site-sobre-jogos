@@ -55,11 +55,11 @@ function clickjog(){
 function clickdisc(){
   if(indice===null){
       alert("LOGIN NECESSÁRIO!")
-      window.location.href = "";
+      window.location.href = "/codigo/html/login.html";
   }
   else{
      
-      window.location.href = "/codigo/html/";
+      window.location.href = "https://discord.gg/pkMY9UdJ";
   }
 }
 
@@ -103,6 +103,37 @@ function moveToNextSlide() {
   slidePosition -= carousel.offsetWidth;
   updateSlidePosition();
 }
+document.addEventListener("DOMContentLoaded", function() {
+  var container = document.querySelector(".carousel-container");
+  var items = document.querySelectorAll(".carousel-item");
+  var currentIndex = 0;
+  var timer = 3;
+
+  function showItem(index) {
+    container.style.transform = "translateX(-" + index * 100 + "%)";
+  }
+
+  function startTimer() {
+    timer = setInterval(function() {
+      currentIndex = (currentIndex + 1) % items.length;
+      showItem(currentIndex);
+    }, 3000);
+  }
+
+  function stopTimer() {
+    clearInterval(timer);
+  }
+
+  startTimer();
+
+  container.addEventListener("mouseenter", function() {
+    stopTimer();
+  });
+
+  container.addEventListener("mouseleave", function() {
+    startTimer();
+  });
+});
 
 btnNext.addEventListener('click', nextSlider)
 btnPrev.addEventListener('click', prevSlider)
