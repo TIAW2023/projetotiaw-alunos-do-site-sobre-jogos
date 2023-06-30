@@ -55,3 +55,17 @@ h1 {
     color: #000000;
     cursor: pointer;
 }
+
+@media (max-width: 1024px){
+    .banner img{
+        width: 350px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    #desc{
+        font-size: 1rem;
+    }
+}
+
+
