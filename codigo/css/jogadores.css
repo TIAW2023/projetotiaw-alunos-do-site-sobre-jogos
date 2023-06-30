@@ -125,7 +125,7 @@ body {
   right: 20px;
   width: 30px;
   height: 30px;
-  background-color: #fbff00; 
+  background-color: lightblue; 
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -133,5 +133,25 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: bold;
+}
+.header {
+  background-color: #111c31;
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-item {
+  margin-right: 20px;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #203158;
+  border-radius: 5px;
 }
 

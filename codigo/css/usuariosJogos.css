@@ -198,3 +198,9 @@ select {
     font-size: 1.0rem;
   }
 }
+#pessoas{
+  position: relative;
+  width: 35%;
+  left: 24%;
+  margin-top: 15%;
+}
