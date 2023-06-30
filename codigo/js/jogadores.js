@@ -1,11 +1,10 @@
-let bancoUsuarios = JSON.parse(localStorage.getItem("dadosUsuarios"));
-let indice = JSON.parse(localStorage.getItem("Logado"));
-console.log(indice);
-function exibirUsuario() {
+let bancoUsuarios = JSON.parse(localStorage.getItem('dadosUsuarios'));
+let indice = JSON.parse(localStorage.getItem('Logado'));
+console.log(bancoUsuarios[indice]);
+onload = () => {
     var card = "";
     for (let i = 0; i < bancoUsuarios.length; i++) {
         const usuario = bancoUsuarios[i];
-
         card += `<div class="rectangle">
           <h1>${usuario.userName}</h1>
           <div class="content">
@@ -14,37 +13,6 @@ function exibirUsuario() {
           </div>
         </div>`
     }
-    document.querySelector(`java`).innerHTML = card;
+    document.querySelector(`#java`).innerHTML = card;
 }   
 
-function mostrarUsuario(){
-    var card = "";
-
-    const id = document.querySelectorAll('java').forEach;
-    
-    button.addEventListener( function(event) {
-    const el = event.target || event.srcElement;
-    const id = el.id;
-    console.log(id);
-  });
-
-    var button = bancoUsuarios['$java'];
-
-    document.querySelector('java').innerHTML = card;
-    document.querySelector('.button').innerHTML = card;
-    
-    mostrarUsuario();
-
-}
-
-const form = document.querySelector('#java');
-form.addEventListener('submit', function(event){
-event.preventDefault();
-console.log('submetido');
-});
-
-
-onload = ()=> {
-    exibirUsuario();
-    
-}
