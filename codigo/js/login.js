@@ -60,7 +60,6 @@ function entrarSite() {
       window.open("../html/index.html");
       contador++;
     }
-    
   }
   if(contador == 0){
     alert("Os dados inseridos estão incorretos ou o usuário não existe");
