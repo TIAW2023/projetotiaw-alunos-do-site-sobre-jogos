@@ -63,7 +63,7 @@ function entrarSite() {
     
   }
   if(contador == 0){
-    alert("Os dados inseridos estão incorretos.")
+    alert("Os dados inseridos estão incorretos ou o usuário não existe");
   }
   
 
