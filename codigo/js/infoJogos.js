@@ -29,7 +29,6 @@ fetch(url, options).then((resposta) => {
     `;
   });
 });
-
 function clicado(titulo) {
   var indice = JSON.parse(localStorage.getItem('Logado'));
   var vetor = JSON.parse(localStorage.getItem('dadosUsuario'));
@@ -39,5 +38,5 @@ function clicado(titulo) {
   localStorage.setItem('dadosUsuario', JSON.stringify(vetor));
   //Código feito por Rafael Sanzio
   console.log(vetor[indice].jogoFavoritos);
-  alert(titulo+" adicionado aos favoritos!");
+  alert(titulo + " adicionado aos favoritos!");
 }
