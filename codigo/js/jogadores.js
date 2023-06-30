@@ -20,7 +20,7 @@ function exibirUsuario() {
 function mostrarUsuario(){
     var card = "";
 
-    const id = document.querySelectorAll('#java').forEach;
+    const id = document.querySelectorAll('java').forEach;
     
     button.addEventListener( function(event) {
     const el = event.target || event.srcElement;
