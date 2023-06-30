@@ -59,7 +59,7 @@ function clickdisc(){
   }
   else{
      
-      window.location.href = "https://discord.gg/pkMY9UdJ";
+      window.location.href = "#";
   }
 }
 
@@ -68,7 +68,7 @@ function menuShow() {
     let menuMobile = document.querySelector('.mobile-menu');
     if (menuMobile.classList.contains('open')) {
         menuMobile.classList.remove('open');
-        document.querySelector('.icon').src = "/codigo/img/close_white_36dp.svg";
+        document.querySelector('.icon').src = "/codigo/img/menu_white_36dp.svg";
     } else {
         menuMobile.classList.add('open');
         document.querySelector('.icon').src = "/codigo/img/close_white_36dp.svg";
@@ -105,35 +105,19 @@ function moveToNextSlide() {
 }
 document.addEventListener("DOMContentLoaded", function() {
   var container = document.querySelector(".carousel-container");
-  var items = document.querySelectorAll(".carousel-item");
-  var currentIndex = 0;
-  var timer = 3;
 
-  function showItem(index) {
-    container.style.transform = "translateX(-" + index * 100 + "%)";
+  function stopAnimation() {
+    container.style.animationPlayState = "paused";
   }
 
-  function startTimer() {
-    timer = setInterval(function() {
-      currentIndex = (currentIndex + 1) % items.length;
-      showItem(currentIndex);
-    }, 3000);
+  function startAnimation() {
+    container.style.animationPlayState = "running";
   }
 
-  function stopTimer() {
-    clearInterval(timer);
-  }
-
-  startTimer();
-
-  container.addEventListener("mouseenter", function() {
-    stopTimer();
-  });
-
-  container.addEventListener("mouseleave", function() {
-    startTimer();
-  });
+  container.addEventListener("mouseenter", stopAnimation);
+  container.addEventListener("mouseleave", startAnimation);
 });
+
 
 btnNext.addEventListener('click', nextSlider)
 btnPrev.addEventListener('click', prevSlider)
