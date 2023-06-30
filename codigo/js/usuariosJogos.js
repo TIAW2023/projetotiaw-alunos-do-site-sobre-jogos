@@ -77,3 +77,23 @@ function renederizarPessoas(pessoas){
     `;
   }
 }
+function carregarUsuarios(){
+  let bancoUsuarios = JSON.parse(localStorage.getItem('dadosUsuario'));
+  let indice = JSON.parse(localStorage.getItem('Logado'));
+  const perfil = document.getElementById("usuarios");
+  console.log(bancoUsuarios);
+  for(let i = 0; i < bancoUsuarios.length; i++){
+    perfil.innerHTML += `<div class="pessoa">
+    <a href="/codigo/html/janelaperfil.html" target="_blank">
+      <img src="https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" alt="Imagem 8">
+    </a>
+    <h2>${bancoUsuarios[i].userName}</h2>
+  </div>`
+  }
+}
+onload = () => {
+  carregarUsuarios();
+}
+function pessoas(){
+  window.location.href = "/codigo/html/jogadores.html";
+}

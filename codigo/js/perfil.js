@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const profileDescription = document.querySelector(".profile-description");
   const profileBio = document.getElementById("profileBio");
   const saveButton = document.getElementById("save-button");
+  const foto = document.getElementById("foto-perfil");
 
   // Obtém os dados do usuário do localStorage
   const dadosUsuario = JSON.parse(localStorage.getItem("dadosUsuario"));
